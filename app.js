@@ -4,12 +4,14 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-app.set('view engine', 'pug')
+//app.set('view engine', 'pug')
 app.use(express.static(path.join(__dirname, 'client')))
 
-const routesApp = require('./routes/')
+//const routesApp = require('./routes/')
+app.get("/", (req, res) => {
+    res.send(results.html)
+})
 
-
-app.use(routesApp)
+//app.use(routesApp)
 app.listen(PORT)
 console.log(`Magic happens at PORT ${PORT}...`)

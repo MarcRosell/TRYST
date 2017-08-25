@@ -1,20 +1,23 @@
 {
-  "name": "TRYST",
-  "version": "1.0.0",
-  "description": "Web App to make appoinments",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MarcRosell/TRYST.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MarcRosell/TRYST/issues"
-  },
-  "homepage": "https://github.com/MarcRosell/TRYST#readme"
+    "name": "TRYST",
+    "version": "1.0.0",
+    "description": "Web App to make appoinments",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarcRosell/TRYST.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MarcRosell/TRYST/issues"
+    },
+    "homepage": "https://github.com/MarcRosell/TRYST#readme",
+    "dependencies": {
+        "express": "^4.15.4"
+    }
 }

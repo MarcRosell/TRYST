@@ -58,6 +58,10 @@ nav ul li a span {
     display: inline;
 }
 
+#search {
+    color: black;
+}
+
 .backgroundSearch .row .row{
     margin-left: 0.5%;
 }

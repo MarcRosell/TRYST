@@ -5,10 +5,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-
         $(".details").hide();
+});
 
-
+$(document).ready(function(){
+Materialize.toast('Sort By Proximity', 3000, 'rounded')
 });
 
 $(document).ready(function(){
