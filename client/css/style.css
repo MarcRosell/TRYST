@@ -1,14 +1,37 @@
-
+.partnering {
+    background-color: lightgray;
+    margin: 10%;
+    padding: 10%;
+}
+.partnerin2 {
+    background-color: lightgray;
+    margin: 1%;
+    margin-top: 3%;
+    padding: 5%;
+}
 .nav-wrapper .brand-logo img {
   height: 60px;
 }
 
+a{
+    color: black;
+}
 .card .card-action p{
     color: grey;
 }
 
+#localizationBox {
+    height: 100%;
+}
+
+#appointBox {
+    height: 100%;
+    padding: 5%;
+    padding-bottom: 0%;
+}
 nav {
     background-color: black;
+    height: 63px;
 }
 
 .filt {
@@ -36,7 +59,7 @@ nav ul li a span {
 }
 
 .backgroundSearch .row .row{
-    margin-left: 1%;
+    margin-left: 0.5%;
 }
 
 .backgroundSearch .row{
@@ -109,11 +132,10 @@ nav ul li a span {
 
 }
 .btn-flat {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    float: right;
 }
+
+
 
 .btn-flat:focus {
     background-color: pink;
@@ -288,26 +310,11 @@ background-color: white;
     color: #EF9A9A;
 }
 
-
-@media (max-width: 800px){
- .filter {
-          background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-}
-}
-
-@media (min-width: 800px){
-    .filter {
-          background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-          width: 16%;
-          float: left;
-          position: fixed;
-          padding: 20px;
-    }
-}
-
 @media (max-width: 800px){
  .reserve {
           background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+          overflow:auto;
+
 }
 }
 
@@ -315,10 +322,12 @@ background-color: white;
     .reserve {
           background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
           width: 55%;
-          height: 650px;
+          height: 610px;
           float: right;
           position: fixed;
           padding: 20px;
+          overflow:auto;
+
     }
 }  
 
@@ -346,7 +355,14 @@ nav ul a.hoover {
     vertical-align: top;
     overflow: hidden;
 }
+.moment-picker td.selected {
+    background-image: linear-gradient(#000,#000);
+}
 
+.justifyText{
+        text-align: justify;
+    text-justify: inter-word
+}
 .cd-headline.type .cd-words-wrapper::after {
     /* vertical bar */
     content: '';
@@ -534,6 +550,74 @@ footer.footer-copyright {
    content: "\2605";
    position: absolute;
 }
+#innerDescrptionBox {
+     height: 300px;
+
+}
 
 
+#cardProfile {
+    padding-left: 0px;
+    height: 500px;
+}
 
+.card {
+  overflow: visible;
+}
+
+.profile-pic {
+  margin-top: -6em;
+  z-index: 1;
+  position: relative;
+}
+
+.imgLogo {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  max-width: 100px;
+}
+.profile-pic > img {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  max-width: 150px;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 70%; // (450 ÷ 500 = 0.9 = 90%)
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color: black;
+}
+
+#DIV_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(106, 106, 106);
+    display: flex;
+    float: left;
+    height: 42px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(106, 106, 106);
+    top: 0px;
+    width: 475px;
+    z-index: 1005;
+    column-rule-color: rgb(106, 106, 106);
+    align-items: center;
+    justify-content: start;
+    perspective-origin: 237.5px 21px;
+    transform-origin: 237.5px 21px;
+    caret-color: rgb(106, 106, 106);
+    border: 1px solid rgb(207, 216, 220);
+    border-radius: 30px 30px 30px 30px;
+    font: normal normal normal normal 16px / 32px WallieFit;
