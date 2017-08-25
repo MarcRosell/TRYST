@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'client')))
 
 //const routesApp = require('./routes/')
 app.get("/", (req, res) => {
-    res.send(results.html)
+    res.sendFile("./client/indexx.html")
 })
 
 //app.use(routesApp)
