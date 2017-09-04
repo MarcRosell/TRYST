@@ -1,0 +1,273 @@
+extends ../layout
+
+block content
+  body#top.scrollspy(ng-cloak='', ng-controller='DemoController as ctrl')
+    // Pre Loader
+    #loader-wrapper
+      #loader
+      .loader-section.section-left
+      .loader-section.section-right
+    // Navigation
+    .navbar-fixed
+      nav#nav_f.default_color(role='navigation')
+        .container
+          .nav-wrapper
+            a#logo-container.brand-logo.filters.center.valign-wrapper(href='#')
+              img.logo(src='img/logo.png')
+            ul.left.hide-on-med-and-down
+              li#openSearch
+                form
+                  .input-field.inputsNavDiv
+                    input#search(type='search', required='', autofocus='')
+                    label.label-icon(placeholder='WHAT?', for='search')
+                      i.material-icons search
+              li.hide.filters
+                form
+                  .input-field.inputsNavDiv
+                    input#search(type='search', placeholder='location', required='', autofocus='')
+                    label.label-icon(for='search')
+                      i.material-icons location_on
+              li.hide.filters
+                form
+                  .input-field.inputsNavDiv
+                    input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM', min-view='year ', placeholder='time', moment-picker='ctrl.input ')
+                    label.label-icon(for='search ')
+                      i.material-icons access_time
+              li.hide.filters
+                form
+                  .input-field.inputsNavDiv
+                    select
+                      option.grey-text(value='0', selected='') category
+                      option(value='1') health
+                      option(value='2') beautyCare
+                      option(value='3') vestry
+                      option(value='4') restoration
+                      option(value='5') motor
+                      option(value='6') animals
+                      option(value='7') kindergarten
+                      option(value='8') other
+                    label.label-icon(for='search ')
+                      i.material-icons dehaze
+            ul.right.hide-on-med-and-down
+              li
+                a.userNav(href='#', data-activates='slide-out', show-on-large='')
+                  i.tiny.material-icons.right.iUser person
+                  span.filters(onclick='openNav()') Marc
+            ul#nav-mobile.side-nav
+              li
+                a(href='#intro ') Service
+              li
+                a(href='#work ') Work
+              li
+                a(href='#team ') Team
+              li
+                a(href='#contact ') Contact
+              li
+                a(href='https://github.com/joashp/material-design-template ', target='_blank ') Download
+            a.button-collapse(href='# ', data-activates='nav-mobile ')
+              i.mdi-navigation-menu
+    // Intro and service
+    .backgroundSearch
+      .row.all
+        .row
+          each comerce, i in comerces
+            .col.s12.m5
+              .card.horizontal
+                .card-image.waves-effect.waves-block.waves-light
+                  img.activator(src='img/1.png')
+                .card-stacked
+                  .card-content
+                    h5.activator
+                      b
+                        a.name(href='') #{comerce.name}
+                      |  · 
+                      span.rating
+                        span ☆
+                        span ☆
+                        span ☆
+                        span ☆
+                        span ☆
+                    p #{comerce.category} · #{comerce.subcategory}
+                  .card-action
+                    p #{comerce.location}
+                .card-reveal
+                  span.card-title.grey-text.text-darken-4
+                    | Card Title
+                    i.material-icons.right close
+                  p
+                    | #{comerce.description}
+            .col.s12.m7.details
+              .card.reserve
+                .card-content
+                .card-tabs
+                  ul.tabs.tabs-fixed-width
+                    li.tab
+                      a.active.clModalBtn(href='#Descritpion') Detail
+                    li.tab
+                      a.clModalBtn(href='#Localization') Location
+                    li.tab
+                      a.clModalBtn(href='#Services') Services
+                    li.tab
+                      a.clModalBtn(href='#TRYST') Appoint
+                .card-content.descripCard.grey.lighten-4
+                  #Descritpion
+                    .row
+                      .col.l12.m12.s12
+                        .row
+                          #cardProfile.col.s12
+                            .card
+                              .card-image
+                                .descriptionImg
+                              #innerDescrptionBox.card-content
+                                .row
+                                  .col.s4.profile-pic
+                                    img.circle.responsive-img(src='img/LOGOPELU.png', alt='')
+                                span.card-title.black-text
+                                  b #{comerce.name}
+                                p.justifyText
+                                  | #{comerce.description}
+                  #Localization
+                    .row
+                      .col.l12.m12.s12
+                        .row
+                          #cardProfile.col.s12
+                            .card
+                              .card-image
+                                .google-maps
+                                  iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11970.951721894411!2d2.1380776697754014!3d41.401497400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2a02611b24f%3A0xdb771ab41a3390c7!2sPerruqueria+Cebado!5e0!3m2!1ses!2ses!4v1503599818841', width='500', height='450', frameborder='0', style='border:0')
+                              #localizationBox.card-content
+                                p
+                                  | #{comerce.location}
+                  #Services
+                    .row
+                      .col.l12.m12.s12
+                        .row
+                          #cardProfile.col.s12
+                            .card
+                              #localizationBox.card-content
+                                table.centered.highlight.responsive-table
+                                  thead
+                                    tr
+                                      th Service
+                                      th Duration
+                                      th Price
+                                  tbody
+                                    each service, i in comerce.services
+                                      tr
+                                        td #{service.service}
+                                        td #{service.time}
+                                        td #{service.price}
+                  #TRYST
+                    .row
+                      .col.l12.m12.s12
+                        .row
+                          #cardProfile.col.s12
+                            .card
+                              div(moment-picker='ctrl.myInput', locale='ca', format='L LT', min-view='year', today='true', inline='true')
+                            .card
+                              #appointBox.card-content
+                                .row
+                                  form.col.s12
+                                    .row
+                                      .input-field.col.s6
+                                        select(disabled='')
+                                          option(value='', disabled='', selected='') {{ ctrl.myInput }}
+                                        label Appointment Date (Select it in the calendar)
+                                      .input-field.col.s6
+                                        select
+                                          each service, i in comerce.services
+                                            option(value='#{service.service}') #{service.service}
+                                        label Service Select
+                                    .row
+                                      .input-field.col.s6
+                                        textarea#textarea1.materialize-textarea(data-length='120')
+                                        label(for='textarea1')  Extra Details
+                                      .col.s6
+                                        button.btnopen.btn-flat.waves-effect.waves-light.valign-wrapper.modalBtn(type='submit', name='action', data-target='modal1')
+                                          | Confirm
+                                          i.material-icons.right done_all
+                  #confirm
+                    .row
+                      .col.l12.m12.s12
+                        .row
+                          #cardProfile.col.s12
+                            .card
+                              #appointBox.card-content
+                                .row
+                                  .col.s12.center-align
+                                    img.circle.imgLogo(src='img/LOGOPELU.png', alt='')
+                                    h5.center-align YOU HAVE MADE AN APPOINMENT!
+                                    p.center-align
+                                      | You will receive and email with the details. Remember you can manage and see your appointments at your profile page
+                                    button.waves-effect.waves-light.btn.valign-wrapper.black.center-align.clModalBtnReturn OK!
+                                    .row.partnerin2
+                                      h5.center-align EARN TIME PAYING NOW YOUR SERVICE
+                                      button.waves-effect.waves-light.btn.valign-wrapper.black.center-align PAY NOW
+          |
+
+    ul#slide-out.side-nav
+      li.backgroundImgUser
+        .user-view
+          a(href='#!user')
+            img.circle.responsive-img(src='img/user.jpg')
+          .user-name
+            a(href='#!marc')
+              span.white-text.name Marc Rosell
+      li
+        a(href='#!')
+          i.material-icons.user-icons blur_linear
+          span Appoinments
+      li
+        a(href='#!')
+          i.material-icons.user-icons settings
+          span Configuration
+      li
+        .divider
+      li
+        a.subheader
+          i.material-icons.red-text.user-icons
+            | exit_to_app
+          | Log Out
+
+      </div>
+
+
+      // The overlay
+      #myNav.overlay
+        // Button to close the overlay navigation
+        a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+        // Overlay content
+        .overlay-content
+          div
+            .container
+              .row
+                .col.s6
+                  h5.header.text_h2.left-align
+                    span.span_h2  find 
+                    |  any commerce providing your 
+                    span.span_h2  need 
+                    |  via proximity, name, category or by
+                    span.span_h2  the desired schedule 
+                    |  and 
+                    span.span_h2  make an online sync appointment
+                .col.s16
+                  .row
+                    form.col.s12
+                      .row
+                        .input-field.col.s6
+                          input#last_name.validate(type='text')
+                          label(for='last_name') First Name
+                        .input-field.col.s6
+                          input#last_name.validate(type='text')
+                          label(for='last_name') Last Name
+                      .row
+                        .input-field.col.s12
+                          input#password.validate(type='password')
+                          label(for='password') Password
+                      .row
+                        .input-field.col.s12
+                          input#email.validate(type='email')
+                          label(for='email', data-error='wrong', data-success='right') Email
+                      button.btn-flat.waves-effect.waves-light(type='submit', name='action')
+                        | sign in
+                        i.material-icons.right done_all

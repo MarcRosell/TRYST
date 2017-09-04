@@ -3,12 +3,32 @@
     margin: 10%;
     padding: 10%;
 }
+
+.card-action{
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+.config {
+    margin-left: 200px;
+    background-color: white;
+    margin: 10%;
+    padding: 10%;
+}
+
 .partnerin2 {
     background-color: lightgray;
     margin: 1%;
     margin-top: 3%;
     padding: 5%;
 }
+
+.inputImg{
+    color: white;
+    border-bottom: 0px !important;
+}
+
 .nav-wrapper .brand-logo img {
   height: 60px;
 }
@@ -42,7 +62,7 @@ nav {
 .backgroundSearch .all {
     padding-top: 1%;
     padding-bottom: 5%;
-    border-bottom: 1px solid lightgray;
+
 
 }
 
@@ -72,6 +92,8 @@ nav ul li a span {
 
 .backgroundSearch {
     background-image: linear-gradient(120deg, #FFFEFF 0%, #ebedee 100%);
+    height: 100vh;
+border-bottom: 1px solid lightgray;
 
 }
 
@@ -79,9 +101,10 @@ nav ul li a span {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        max-height: 150px;
+        height: 150px;
         overflow: hidden;
         box-shadow: none; border: 0px solid white; opacity: 1;
+        border-radius: 5px;
 }
 
 .card.horizontal:hover {
@@ -191,6 +214,13 @@ div.fondo {
     height: 280px;
     width: 100px;
     background-image: linear-gradient(to top, #feada6 0%, #facfff 99%, #faefef 100%);
+}
+
+.backgroundImgUser{
+ background-image: linear-gradient(to top, #feada6 0%, #facfff 99%, #faefef 100%);
+ padding-top: 10%;
+
+
 }
 
 div.fondo2 {
@@ -586,7 +616,7 @@ footer.footer-copyright {
 
 .google-maps {
     position: relative;
-    padding-bottom: 70%; // (450 ÷ 500 = 0.9 = 90%)
+    padding-bottom: 70%;
     height: 0;
     overflow: hidden;
 }
@@ -598,30 +628,129 @@ footer.footer-copyright {
     height: 100%;
 }
 
+
 .dropdown-content li>a, .dropdown-content li>span{
     color: black;
 }
 
-#DIV_1 {
-    bottom: 0px;
-    box-sizing: border-box;
-    color: rgb(106, 106, 106);
-    display: flex;
-    float: left;
-    height: 42px;
-    left: 0px;
+.dropdown-content.active{
+    min-width: fit-content;
+}
+.inputsNavDiv{
+    width: 200px !important
+}
+
+nav ul li span:hover i{
+    color: black;
+}
+
+.user-view{
+    padding-top: 15%;
+}
+
+.user-icons {
+    vertical-align: text-bottom;
+    margin-right: 4%;
+}
+
+div.user-name {
+    margin-top: 30px;
+}
+
+.select-wrapper input.select-dropdown{
+    color:black;
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    display: inline;
+    border: 0px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    grey;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    grey;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    grey;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    grey;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    grey;
+}
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(f,F,F);
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
     position: relative;
-    right: 0px;
-    text-decoration: none solid rgb(106, 106, 106);
-    top: 0px;
-    width: 475px;
-    z-index: 1005;
-    column-rule-color: rgb(106, 106, 106);
-    align-items: center;
-    justify-content: start;
-    perspective-origin: 237.5px 21px;
-    transform-origin: 237.5px 21px;
-    caret-color: rgb(106, 106, 106);
-    border: 1px solid rgb(207, 216, 220);
-    border-radius: 30px 30px 30px 30px;
-    font: normal normal normal normal 16px / 32px WallieFit;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.navf2 {
+    margin-left: 3%;
+    margin-right: 7%;
+    width: auto;
+    margin-top: -7%;
+    border-radius: 100px;
+    color: white;
+}
+
+.cancel {
+    font-size: 15px;
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-left: 10%;
+}
+
+.iUser{
+line-height: inherit;
+}

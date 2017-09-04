@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html ng-app="Demo" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TRYST</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body id="top" class="scrollspy" ng-cloak ng-controller="DemoController as ctrl">
+    <!-- Pre Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!--Navigation-->
+    <div class="navbar-fixed">
+        <nav id="nav_f" class="default_color" role="navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" id="logo-container" class="brand-logo filters center valign-wrapper"><img class = "logo " src="img/logo.png"></a>
+                    <ul class="left hide-on-med-and-down">
+                        <li id = "openSearch"">
+                            <form>
+                                <div  class="input-field inputsNavDiv">
+                                    <input id="search" type="search" required autofocus>
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hide filters">
+                            <form>
+                                <div class="input-field inputsNavDiv">
+                                    <input id="search" type="search" required autofocus>
+                                    <label class="label-icon" for="search"><i class="material-icons">location_on</i></label>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="hide filters">
+                            <form>
+                                <div class="input-field inputsNavDiv">
+                                    <input id="search" type="search" required autofocus class="form-control input-field" " ng-model="ctrl.input " ng-model-options="{ updateOn: 'blur' } " locale="ca " format="LT L" min-view="year " moment-picker="ctrl.input ">
+                                    <label class="label-icon " for="search "><i class="material-icons ">access_time</i></label>
+                                </div>
+                            </form>
+                        </li>
+                        <li class = "hide filters"><a class="dropdown-button " href="#! " data-activates="dropdown1 "><span id = "cat"><i class="material-icons ">dehaze</i></span></a></li>
+                    </ul>
+                        
+                    <ul class="right hide-on-med-and-down ">
+                        <li><a href=" "><i class="tiny material-icons right ">person</i><span class = "filters">Marc</span></a></li>
+                        
+                    </ul>
+                    <ul id="nav-mobile " class="side-nav ">
+                        <li><a href="#intro ">Service</a></li>
+                        <li><a href="#work ">Work</a></li>
+                        <li><a href="#team ">Team</a></li>
+                        <li><a href="#contact ">Contact</a></li>
+                        <li><a href="https://github.com/joashp/material-design-template " target="_blank ">Download</a></li>
+                    </ul>
+                    <a href="# " data-activates="nav-mobile " class="button-collapse "><i class="mdi-navigation-menu "></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Intro and service-->
+    <ul id="dropdown1 " class="dropdown-content ">
+        <li><a href="# " value="1 ">Health</a></li>
+        <li><a href="# " value="2 ">BeautyCare</a></li>
+        <li><a href="# " value="3 ">Vestry</a></li>
+        <li><a href="# " value="4 ">Gardening</a></li>
+        <li><a href="# " value="5 ">Restoration</a></li>
+        <li><a href="# " value="6 ">Food</a></li>
+        <li><a href="# " value="7 ">Furniture</a></li>
+        <li><a href="# " value="8 ">Motor</a></li>
+        <li><a href="# " value="9 ">Kindergarten</a></li>
+        <li><a href="# " value="10 ">Animals</a></li>
+        <li><a href="# " value="11 ">Other</a></li>
+    </ul>
+    <div class="backgroundSearch ">
+        <div class="row all ">
+            <div class="row ">
+                <div class="col s12 m5 ">
+                    <div class="card horizontal ">
+                        <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator " src="img/1.png ">
+                        </div>
+                        <div class="card-stacked ">
+                            <div class="card-content ">
+                                <h5 class="activator "><b><a href=" " class="name ">YOURHAIR</a></b> · <span class = "rating "><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></span></h5>
+                                <p>Hairdressing · Cosmetology</p>
+                            </div>
+                            <div class="card-action ">
+                                <p>Paseo del Canal 5, 08970 Sant Joan Despi</p>
+                            </div>
+                        </div>
+                        <div class="card-reveal ">
+                            <span class="card-title grey-text text-darken-4 ">Card Title<i class="material-icons right ">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m7 details ">
+                    <div class="card reserve ">
+                        <div class="card-content ">
+                        </div>
+                        <div class="card-tabs ">
+                            <ul class="tabs tabs-fixed-width ">
+                                <li class="tab "><a class="active clModalBtn " href="#Descritpion ">Detail</a></li>
+                                <li class="tab "><a class = "clModalBtn " href="#Localization ">Location</a></li>
+                                <li class="tab "><a class = "clModalBtn " href="#Services ">Services</a></li>
+                                <li class="tab "><a class = "clModalBtn " href="#TRYST ">Appoint</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content descripCard grey lighten-4 ">
+                            <div id="Descritpion ">
+                                <div class="row ">
+                                    <div class="col l12 m12 s12 ">
+                                        <div class="row ">
+                                            <div class="col s12 " id="cardProfile ">
+                                                <div class="card ">
+                                                    <div class="card-image ">
+                                                        <div class="descriptionImg "></div>
+                                                    </div>
+                                                    <div class="card-content " id="innerDescrptionBox ">
+                                                        <div class="row ">
+                                                            <div class="col s4 profile-pic ">
+                                                                <img class="circle responsive-img " src="img/LOGOPELU.png " alt=" " />
+                                                            </div>
+                                                        </div>
+                                                        <span class="card-title black-text "><b>Your Hair</b></span>
+                                                        <p class="justifyText ">
+                                                            Our professionally trained Barbers take time to understand your desired hairstyle, whether its that brilliantly crafted fade or that natural fall of a Scissors Trim! Whatever your hair requirements , be sure to discuss it with us to get our professional advice! Crafted fade or that natural fall!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Localization ">
+                                <div class="row ">
+                                    <div class="col l12 m12 s12 ">
+                                        <div class="row ">
+                                            <div class="col s12 " id="cardProfile ">
+                                                <div class="card ">
+                                                    <div class="card-image ">
+                                                        <div class="google-maps ">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11970.951721894411!2d2.1380776697754014!3d41.401497400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2a02611b24f%3A0xdb771ab41a3390c7!2sPerruqueria+Cebado!5e0!3m2!1ses!2ses!4v1503599818841 " width="500 " height="450 " frameborder="0 " style="border:0 "></iframe>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-content " id="localizationBox ">
+                                                        <p>
+                                                            Balmes 45, 08080 Barcelona
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Services ">
+                                <div class="row ">
+                                    <div class="col l12 m12 s12 ">
+                                        <div class="row ">
+                                            <div class="col s12 " id="cardProfile ">
+                                                <div class="card ">
+                                                    <div class="card-content " id="localizationBox ">
+                                                        <table class="centered highlight responsive-table ">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Service</th>
+                                                                    <th>Duration</th>
+                                                                    <th>Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Cut Long Hair</td>
+                                                                    <td>35'</td>
+                                                                    <td>$27.50</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Cut Short Hair</td>
+                                                                    <td>25'</td>
+                                                                    <td>$18.40</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tint</td>
+                                                                    <td>50'</td>
+                                                                    <td>$45.75</td>
+                                                                </tr>
+                                                                <td>Cut Long Hair</td>
+                                                                <td>35'</td>
+                                                                <td>$27.50</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Cut Short Hair</td>
+                                                                    <td>25'</td>
+                                                                    <td>$18.40</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tint</td>
+                                                                    <td>50'</td>
+                                                                    <td>$45.75</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TRYST ">
+                                <div class="row ">
+                                    <div class="col l12 m12 s12 ">
+                                        <div class="row ">
+                                            <div class="col s12 " id="cardProfile ">
+                                                <div class="card ">
+                                                    <div moment-picker="ctrl.myInput " locale="ca " format="L LT " min-view="year " today="true " inline="true ">
+                                                    </div>
+                                                </div>
+                                                <div class="card ">
+                                                    <div class="card-content " id="appointBox ">
+                                                        <div class="row ">
+                                                            <form class="col s12 ">
+                                                                <div class="row ">
+                                                                    <div class="input-field col s6 ">
+                                                                        <select disabled>
+                                                                            <option value=" " disabled selected>{{ ctrl.myInput }}</option>
+                                                                        </select>
+                                                                        <label>Appointment Date (Select it in the calendar)</label>
+                                                                    </div>
+                                                                    <div class="input-field col s6 ">
+                                                                        <select>
+                                                                            <option value="1 ">Cut Short Hai</option>
+                                                                            <option value="2 ">Cut Long Hai</option>
+                                                                            <option value="3 ">Tint </option>
+                                                                        </select>
+                                                                        <label>Service Select</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row ">
+                                                                    <div class="input-field col s6 ">
+                                                                        <textarea id="textarea1 " class="materialize-textarea " data-length="120 "></textarea>
+                                                                        <label for="textarea1 "> Extra Details</label>
+                                                                    </div>
+                                                                    <div class="col s6 ">
+                                                                        <button class="btnopen btn-flat waves-effect waves-light valign-wrapper modalBtn " type="submit " name="action " data-target="modal1 ">Confirm
+                                                                            <i class="material-icons right ">done_all</i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="confirm ">
+                                <div class="row ">
+                                    <div class="col l12 m12 s12 ">
+                                        <div class="row ">
+                                            <div class="col s12 " id="cardProfile ">
+                                                <div class="card ">
+                                                    <div class="card-content " id="appointBox ">
+                                                        <div class="row ">
+                                                            <div class="col s12 center-align ">
+                                                                <img class="circle imgLogo " src="img/LOGOPELU.png " alt=" " />
+                                                                <h5 class="center-align ">YOU HAVE MADE AN APPOINMENT!</h5>
+                                                                <p class="center-align ">You will receive and email with the details. Remember you can manage and see your appointments at your profile page</p>
+                                                                <button class=" waves-effect waves-light btn valign-wrapper black center-align clModalBtnReturn ">OK!</button>
+                                                                <div class="row partnerin2 ">
+                                                                    <h5 class="center-align ">EARN TIME PAYING NOW YOUR SERVICE</h5>
+                                                                    <button class=" waves-effect waves-light btn valign-wrapper black center-align ">PAY NOW</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col s12 m5 ">
+                    <div class="card horizontal ">
+                        <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator " src="img/2.png ">
+                        </div>
+                        <div class="card-stacked ">
+                            <div class="card-content ">
+                                <h5 class="activator "><b>YOURHAIR</b> · <span class = "rating "><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></span></h5>
+                                <p>Hairdressing · Cosmetology</p>
+                            </div>
+                            <div class="card-action ">
+                                <p>Paseo del Canal 5, 08970 Sant Joan Despi</p>
+                            </div>
+                        </div>
+                        <div class="card-reveal ">
+                            <span class="card-title grey-text text-darken-4 ">Card Title<i class="material-icons right ">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    <div id="info-modal " class="modal ">
+        <div class="modal-content ">
+            <h4 class="modal-title ">Duplication Checking Info</h4>
+            <p><strong>IP Duplication Checking</strong> - Duplicate votes will be disallowed based on the IP address of the user.</p>
+            <p><strong>Browser Cookie Duplication Checking</strong> - Duplicate votes will be disallowed based on the browser of the user, allowing multiple votes from the same IP address.</p>
+            <p><strong>No Duplication Checking</strong> - Duplication checking will be disabled and users can vote as many times as they would like.</p>
+            <p><strong>Require User Sign In to Vote</strong> - Voting is not allowed unless the voter is signed into their Suffragium account.</p>
+        </div>
+        <div class="modal-footer ">
+            <span><a id="btnClose " class="modal-action btn-flat ">Ok</a></span>
+        </div>
+    </div>
+    <!--Parallax
+    <div class="parallax-container ">
+        <div class="parallax "><img src="img/parallax1.png "></div>
+    </div>-->
+    <footer class="page-footer grey lighten-3 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col l6 s12 ">
+                    <h5 class="black-text "> <b> TYRST ® </b> </h5>
+                    <p class="grey-text text-darken-3 ">Created, designed and developed by Marc Rosell
+                        <br> 2017 Copyright </p>
+                </div>
+                <div class="col l4 offset-l2 s12 ">
+                    <ul>
+                        <li><a class="grey-text text-accent-2 " href="#intro ">register</a></li>
+                        <li><a class="grey-text text-accent-2 " href="#team ">how it works</a></li>
+                        <li><a class="grey-text text-accent-2 " href="#! ">facebook</a></li>
+                        <li><a class="grey-text text-accent-2 " href="#! ">instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey lighten-3 ">
+        </div>
+    </footer>
+    <!--  Scripts-->
+    <script type="text/javascript " src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js " type="text/javascript "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js "></script>
+    <script src="https://rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.js "></script>
+    <script src="js/calendar.js "></script>
+    <script src="js/render.js "></script>
+    <script>
+    $('#dropdown1 li a').on('click', function(e) {
+        console.log($("#cat "))
+        console.log(this)
+        $("#cat ").html(this)
+        console.log($("#cat "))
+    })
+    </script>
+</body>
+
+</html>
