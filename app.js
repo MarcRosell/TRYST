@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const path = require('path')
 const bodyParser = require('body-parser')
 const cookieSession = require('cookie-session')
+const ComerceSchema = require('./models/Comerce')
 
 const PORT = process.env.PORT || 3000
 
@@ -13,7 +14,7 @@ app.set('view engine', 'pug')
 const User = require('./models/User')
 const Comerce = require('./models/Comerce')
 
-const urlDB = process.env.urlDB || 'mongodb://admin:admin@ds123614.mlab.com:23614/tryst'
+const urlDB = process.env.urlDB || 'mongodb://localhost:27017/tryst'
 
 mongoose.Promise = Promise
 mongoose.connect(urlDB, {useMongoClient: true})
@@ -42,9 +43,13 @@ app.get('/config', (req,res) => {
 })
 
 app.get('/results', (req,res) => {
-	var comerces = require('./data/commerces.json')
+	// var comerces = require('./data/commerces.json')
 	// NOTE ir a mongo y recoger datos...
-  res.render('pages/results', { comerces })
+  	// res.render('pages/results', { comerces })
+  	ComerceSchema
+  		.find()
+  		.then(commerce => res.render('pages/results', { commerce }))
+
 })
 
 app.post('/create-item', (req, res) => {
