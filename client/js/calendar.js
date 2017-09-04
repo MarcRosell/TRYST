@@ -1,5 +1,5 @@
 angular
-  .module('Demo', ['moment-picker'])
+  .module('Demo')
   .controller('DemoController', ['$scope', function () {
     var ctrl = this;
   }]);

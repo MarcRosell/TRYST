@@ -1,15 +1,15 @@
-angular.module('demo')
+angular.module('Demo')
 
-    .controller('configController', function($scope, configService, $window) {
+    .controller('configController', function($scope, userService, $window) {
 
-        configService.getInfo(id)
+        userService.getInfo(id)
             .then(function(response) {
                 $scope.user = response
             })
 
 
         $scope.updateProfile = function(id, date) {
-            configService.updateProfile();
+            userService.updateProfile();
         }
 
     })

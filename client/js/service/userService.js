@@ -1,6 +1,6 @@
-angular.module('demo')
+angular.module('Demo')
 
-    .factory('configService', function($http) {
+    .factory('userService', function($http) {
 
         var getInfoUser = function(id) {
             var url = 'api/user/' + id

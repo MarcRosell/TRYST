@@ -1,4 +1,4 @@
-angular.module('demo')
+angular.module('Demo')
     .config(function ($routeProvider) {
       $routeProvider
             .when('/profile', {

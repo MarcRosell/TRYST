@@ -1,1 +1,1 @@
-angular.module('Demo', ['ngRoute'])
+angular.module('Demo', ['ngRoute', 'moment-picker'])
