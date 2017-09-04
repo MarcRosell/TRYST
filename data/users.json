@@ -1,0 +1,1 @@
+[{"_id":{"$oid":"59ad3bde6a9878e5c9696ddd"},"name":"Pablo","mail":"marcrosrec@gmail.com"},{"_id":{"$oid":"59ad3ccf6a9878e5c9696dde"},"firstname":"Marc","lastname":"Rosell","image":"httpasdasdsad","email":"marcrosrec@gmail.com","password":"holahola","appointments":[{"date":"19/02/1995 19:35","service":"Cut Hair","duration":"30"}]}]
