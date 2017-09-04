@@ -13,7 +13,7 @@ app.set('view engine', 'pug')
 const User = require('./models/User')
 const Comerce = require('./models/Comerce')
 
-const urlDB = process.env.urlDB || 'mongodb://localhost:27017/tryst'
+const urlDB = process.env.urlDB || 'mongodb://admin:admin@ds123614.mlab.com:23614/tryst'
 
 mongoose.Promise = Promise
 mongoose.connect(urlDB, {useMongoClient: true})
