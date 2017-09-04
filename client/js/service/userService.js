@@ -6,7 +6,7 @@ angular.module('Demo')
             var url = 'api/user/' + id
             return $http.get(url)
                 .then(function(response) {
-                    return response.data
+                    return response.data.data
                 })
         }
 

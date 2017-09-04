@@ -2,9 +2,11 @@ angular.module('Demo')
 
     .controller('configController', function($scope, userService, $window) {
 
-        userService.getInfo(id)
-            .then(function(response) {
-                $scope.user = response
+    	const id = '59ad3ccf6a9878e5c9696dde'
+
+        userService.getInfoUser(id)
+            .then(function(user) {
+                $scope.user = user
             })
 
 
