@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $(".details").hide();
+    $(".reserve").hide();
 });
 
 $(document).ready(function() {
@@ -14,7 +14,12 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(".name").click(function() {
-        $(".details").toggle();
+        $(".reserve").hide();
+        
+        var index = $(this).data('index')
+        console.log(index);
+
+        $(".detail-" + index).toggle();
     });
 });
 

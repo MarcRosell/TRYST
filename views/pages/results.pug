@@ -67,8 +67,8 @@ block content
     .backgroundSearch
       .row.all
         .row
-          each commerce, i in commerces
-            .col.s12.m5
+          .col.s12.m5
+            each commerce, index in commerces
               .card.horizontal
                 .card-image.waves-effect.waves-block.waves-light
                   img.activator(src='img/1.png')
@@ -76,7 +76,7 @@ block content
                   .card-content
                     h5.activator
                       b
-                        a.name(href='') #{commerce.name}
+                        a.name(href='', data-index=index) #{commerce.name}
                       |  · 
                       span.rating
                         span ☆
@@ -93,8 +93,9 @@ block content
                     i.material-icons.right close
                   p
                     | #{commerce.description}
-            .col.s12.m7.details
-              .card.reserve
+          .col.s12.m7.details
+            each commerce, index in commerces
+              .card.reserve(class=('detail-' + index))
                 .card-content
                 .card-tabs
                   ul.tabs.tabs-fixed-width
