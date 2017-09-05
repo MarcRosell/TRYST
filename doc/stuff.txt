@@ -1,0 +1,3 @@
+mongoexport -d tryst -c commerce --jsonArray -o data/commerce.json
+
+mongoimport -d tryst -c commerce --jsonArray --file data/commerce.json
