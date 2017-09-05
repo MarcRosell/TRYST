@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const collection = 'commerce'
 
-var ComerceSchema = new mongoose.Schema(
+var CommerceSchema = new mongoose.Schema(
 {
     name: String,
     category: String,
@@ -22,11 +22,11 @@ var ComerceSchema = new mongoose.Schema(
     appoinments: [{
         user: String,
         date: String,
-        service: 
-    }]
+        service: String
+    }],
     logo: String,
     img: String
 }, { collection })
 
 
-module.exports = mongoose.model('Comerce', ComerceSchema);
+module.exports = mongoose.model('Commerce', CommerceSchema);

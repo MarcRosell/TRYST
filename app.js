@@ -14,7 +14,7 @@ app.set('view engine', 'pug')
 /* models loading */
 
 const User = require('./models/User') 
-const Comerce = require('./models/Comerce')
+const Commerce = require('./models/Commerce')
 
 /* orm setup */
 
@@ -22,7 +22,7 @@ const urlDB = process.env.urlDB || 'mongodb://localhost:27017/tryst'
 
 mongoose.Promise = Promise
 mongoose.connect(urlDB, {useMongoClient: true})
-console.log('db is connected to ${urlDB}')
+console.log(`db is connected to ${urlDB}`)
 
 /* express setup */
 
@@ -44,14 +44,31 @@ app.get('/appointments', (req,res) => {
   res.render('pages/appointments')
 })
 
-app.get('/config', (req,res) => {
+app.get('/user', (req,res) => {
   res.render('pages/user')
 })
 
 app.get('/results', (req,res) => {
-  	Comerce
+  	Commerce
   		.find()
   		.then(commerce => res.render('pages/results', { commerce }))
+})
+
+/* form handling */
+
+app.post('/search', (req, res) => {
+    const query = req.body.query
+
+    Commerce
+      .find({ name: new RegExp(query, 'i') })
+      .sort({ name: 1 })
+      .exec((err, commerces) => {
+        if (err) return res.send('search error')
+
+        if (commerces.length === 0) return res.send('no results')
+
+          res.send(commerces)
+      })
 })
 
 /* api handling */
@@ -135,7 +152,7 @@ app.put('/api/user/:id/remove/:appointmentDate', (req, res) => {
 
 app.put('/api/book/:id', (req,res) => {
   var {id} = req.params
-  Comerce.findByIdAndUpdate(id, { $push: {appointments: { user: date: appointmentDate}
+  Commerce.findByIdAndUpdate(id, { $push: {appointments: { date: appointmentDate} } })
       .then(data => {
       res.send({
         result: 'OK',
@@ -150,7 +167,7 @@ app.put('/api/book/:id', (req,res) => {
       })
     })
   })
-})
+
 
 
 

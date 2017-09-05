@@ -27,14 +27,14 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#openSearch").click(function() {
-        $(".filters").toggleClass("hide").fadeIn("slow" );
+        $(".filters").toggleClass("hide").fadeIn("slow");
     });
 });
 
 $(document).ready(function() {
     $(".modalBtn").click(function() {
         $("#TRYST").hide();
-        $("#confirm").fadeIn( "slow" );
+        $("#confirm").fadeIn("slow");
 
     });
 });
@@ -54,12 +54,12 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-  $('.userNav').sideNav({
-      menuWidth: 200,
-      edge: 'right', 
-      closeOnClick: false, 
-      draggable: true, 
-});
+    $('.userNav').sideNav({
+        menuWidth: 200,
+        edge: 'right',
+        closeOnClick: false,
+        draggable: true,
+    });
 })
 
 
@@ -97,5 +97,13 @@ function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
 
+/* home */
 
-
+$('#search')
+    .keypress(function(e) {
+        if (e.which === 13) {
+            $('#search-form').submit();
+            
+            return false;
+        }
+    });

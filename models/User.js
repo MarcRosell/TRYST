@@ -8,7 +8,7 @@ var UserSchema = new mongoose.Schema({
   email: String,
   password: String,
   // appointments: [{ type: mongoose.Schema.ObjectId,
-  //                   ref: "Comerce",
+  //                   ref: "Commerce",
   //                   date: Date,
   //                   service: String,
   //                   duration: Number,
