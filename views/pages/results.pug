@@ -100,15 +100,15 @@ block content
                 .card-tabs
                   ul.tabs.tabs-fixed-width
                     li.tab
-                      a.active.clModalBtn(href='#Descritpion') Detail
+                      a.active.clModalBtn(href='#descritpion-' + index) Detail
                     li.tab
-                      a.clModalBtn(href='#Localization') Location
+                      a.clModalBtn(href='#location-' + index) Location
                     li.tab
-                      a.clModalBtn(href='#Services') Services
+                      a.clModalBtn(href='#services-' + index) Services
                     li.tab
-                      a.clModalBtn(href='#TRYST') Appoint
+                      a.clModalBtn(href='#tryst-' + index) Appoint
                 .card-content.descripCard.grey.lighten-4
-                  #Descritpion
+                  div(id=('descritpion-' + index))
                     .row
                       .col.l12.m12.s12
                         .row
@@ -124,7 +124,7 @@ block content
                                   b #{commerce.name}
                                 p.justifyText
                                   | #{commerce.description}
-                  #Localization
+                  div(id=('location-' + index))
                     .row
                       .col.l12.m12.s12
                         .row
@@ -136,7 +136,7 @@ block content
                               #localizationBox.card-content
                                 p
                                   | #{commerce.location}
-                  #Services
+                  div(id=('services-' + index))
                     .row
                       .col.l12.m12.s12
                         .row
@@ -155,7 +155,7 @@ block content
                                         td #{service.service}
                                         td #{service.time}
                                         td #{service.price}
-                  #TRYST
+                  div(id=('tryst-' + index))
                     .row
                       .col.l12.m12.s12
                         .row

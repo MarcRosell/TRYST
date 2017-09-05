@@ -6,6 +6,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $(".reserve").hide();
+
+    $(".detail-0").show();
 });
 
 $(document).ready(function() {
@@ -15,7 +17,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".name").click(function() {
         $(".reserve").hide();
-        
+
         var index = $(this).data('index')
         console.log(index);
 
