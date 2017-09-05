@@ -2,18 +2,6 @@ const mongoose = require('mongoose');
 const collection = 'commerce'
 
 var ComerceSchema = new mongoose.Schema(
-// {
-//   location: String,
-//   category: String,
-//   subcategory: String,
-//   name: Date,
-//   services: [{
-//   	service: String,
-//   	duration: Number,
-//   }],
-//   free: Boolean,
-// }, { collection })
-
 {
     name: String,
     category: String,
@@ -31,6 +19,11 @@ var ComerceSchema = new mongoose.Schema(
         price: Number
         }
     ],
+    appoinments: [{
+        user: String,
+        date: String,
+        service: 
+    }]
     logo: String,
     img: String
 }, { collection })

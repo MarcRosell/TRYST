@@ -36,7 +36,6 @@ app.get('/', (req,res) => {
   res.render('pages/home')
 })
 
-
 app.get('/configuration', (req,res) => {
   res.render('pages/config')
 })
@@ -50,23 +49,15 @@ app.get('/config', (req,res) => {
 })
 
 app.get('/results', (req,res) => {
-	// var comerces = require('./data/commerces.json')
-	// NOTE ir a mongo y recoger datos...
-  	// res.render('pages/results', { comerces })
   	Comerce
   		.find()
   		.then(commerce => res.render('pages/results', { commerce }))
-
-})
-
-app.post('/create-item', (req, res) => {
 })
 
 /* api handling */
 
 app.get('/api/user/:id', (req, res) => {
    const id = req.params.id
-
    User
     .findById(id)
     .then(user => {
@@ -84,7 +75,85 @@ app.get('/api/user/:id', (req, res) => {
     })
 })
 
-// TODO
+app.post('/api/register', (req, res) => {
+  const {firstname, lastname, email, password} = req.body
+  const user = new User({firstname:firstname, lastname:lastname, email:email, password:password, image:image})
+  (user, password, err => {
+    if (err) {
+      return res.redirect('/home')
+    }
+    res.redirect('/home')
+  })
+})
+
+app.post('/api/user/update', (req, res) => {
+  var { _id, firstname, lastname, email, password} = req.body
+  User.findByIdAndUpdate(_id, { $set: { firstname:firstname, lastname:lastname, email:email, password:password, image:image } }, function (err, tank) {
+    res.redirect('/user#!/profile')
+  })
+})
+
+app.get('/api/user/:id', (req, res) => {
+   const id = req.params.id
+   User
+    .findById(id)
+    .then(user => {
+      res.send({
+        result: 'OK',
+        message: 'User appointments found correctly',
+        data: user.appointments
+      })
+    })
+    .catch(err => {
+      res.send({
+        result: 'KO',
+        message: err
+      })
+    })
+})
+
+
+app.put('/api/user/:id/remove/:appointmentDate', (req, res) => {
+  var {id, appointmentDate} = req.params
+  console.log(id, appointmentDate)
+  User.findByIdAndUpdate(id, { $pull: { appointments: {date: appointmentDate} } })
+    .then(data => {
+      res.send({
+        result: 'OK',
+        message: 'appoinments removed correctly',
+        data: data
+      })
+    })
+    .catch(err => {
+      res.send({
+        result: 'KO',
+        message: err
+      })
+    })
+})
+
+
+app.put('/api/book/:id', (req,res) => {
+  var {id} = req.params
+  Comerce.findByIdAndUpdate(id, { $push: {appointments: { user: date: appointmentDate}
+      .then(data => {
+      res.send({
+        result: 'OK',
+        message: 'appoinment added correctly',
+        data: data
+      })
+    })
+    .catch(err => {
+      res.send({
+        result: 'KO',
+        message: err
+      })
+    })
+  })
+})
+
+
+
 
 //app.use(routesApp)
 app.listen(PORT)

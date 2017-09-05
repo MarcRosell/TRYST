@@ -1,7 +1,6 @@
-angular.module('demo')
+angular.module('Demo')
 
     .factory('appointmentsService', function($http) {
-
 
         var getAppointments = function(userId) {
             var url = 'api/user/' + userId
@@ -10,7 +9,6 @@ angular.module('demo')
                     return response.data.appointments
                 })
         }
-
 
         var removeAppointment = function(id, date) {
             var url = '/api/user/' + id + '/remove/' + date
