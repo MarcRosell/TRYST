@@ -7,12 +7,12 @@ var UserSchema = new mongoose.Schema({
   image: String,
   email: String,
   password: String,
-  // appointments: [{ type: mongoose.Schema.ObjectId,
-  //                   ref: "Commerce",
-  //                   date: Date,
-  //                   service: String,
-  //                   duration: Number,
-  //               }],
+  appointments: [{ type: mongoose.Schema.ObjectId,
+                    ref: "Commerce",
+                    date: Date,
+                    service: String,
+                    duration: Number,
+                }],
 }, { collection })
 
 module.exports = mongoose.model('User', UserSchema);

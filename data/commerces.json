@@ -1,5 +1,5 @@
 [
-{
+    {
     "name": "Flora",
     "category": "BeautyCare",
     "subcategory": "Hair",
@@ -16,6 +16,17 @@
     	"price": "421"
     	}
 	],
+    "appointments": [{
+        "user": "armando",
+        "date": "19/11/2017",
+        "service": "cortar pelo"
+        },
+        {
+        "user": "gerard",
+        "date": "22/11/2017",
+        "service": "cortar pelo"
+        }
+    ],
 	"logo": "img/LOGOPELU.png",
 	"img": "img/2.png"
 },
@@ -36,6 +47,60 @@
     	"price": "421"
     	}
 	],
+    "appointments": [{
+        "user": "armando",
+        "date": "19/11/2017",
+        "service": "cortar pelo"
+        },
+        {
+        "user": "gerard",
+        "date": "22/11/2017",
+        "service": "cortar pelo"
+        }
+    ],
 	"logo": "img/LOGOPELU.png",
 	"img": "img/2.png"
 }]
+
+
+{
+    "name": "noloraka",
+    "category": "Health",
+    "subcategory": "feika",
+    "location": "Verneda 20, 08960 Sant Just Desvern",
+    "description": "Our professionally trained Barbers take time to understand your desired hairstyle, whether its that brilliantly crafted fade or that natural fall of a Scissors Trim! Whatever your hair requirements , be sure to discuss it with us to get our professional advice! Crafted fade or that natural fall!",
+    "services": [{
+        "service": "cortar diente",
+        "time": "15",
+        "price": "421"
+        },
+        {
+        "service": "lavar brazo derecho",
+        "time": "15",
+        "price": "421"
+        }
+    ],
+    "appointments": [{
+        "user": "armando",
+        "date": "24/11/2017",
+        "service": "cortar pelo"
+        },
+        {
+        "user": "gerard",
+        "date": "24/11/2017",
+        "service": "cortar pelo"
+        }
+    ],
+    "logo": "img/LOGOPELU.png",
+    "img": "img/2.png"
+}
+
+
+
+
+
+
+
+
+
+

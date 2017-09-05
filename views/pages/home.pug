@@ -57,39 +57,36 @@ block content
           .container
             .nav-wrapper
               ul.left.hide-on-med-and-down
-                li
-                  form#search-form(action='/search', method='post')
+                form#search(action='/search', method='post')
+                  li
                     .input-field.inputsNavDiv
-                      input#search(type='search', name='query', required='', autofocus='')
+                      input#search(type='search', name='search', required='true', autofocus='')
                       label.label-icon(placeholder='WHAT?', for='search')
                         i.material-icons search
-                //- li.filters
-                //-   form
-                //-     .input-field.inputsNavDiv
-                //-       input#search(type='search', placeholder='location', required='', autofocus='')
-                //-       label.label-icon(for='search')
-                //-         i.material-icons location_on
-                //- li.filters
-                //-   form
-                //-     .input-field.inputsNavDiv
-                //-       input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM ', min-view='year ', placeholder='time ', moment-picker='ctrl.input ')
-                //-       label.label-icon(for='search ')
-                //-         i.material-icons access_time
-                //- li.filters
-                //-   form
-                //-     .input-field.inputsNavDiv
-                //-       select
-                //-         option.grey-text(value='0 ', selected=' ') category
-                //-         option(value='1 ') health
-                //-         option(value='2 ') beautyCare
-                //-         option(value='3 ') vestry
-                //-         option(value='4 ') restoration
-                //-         option(value='5 ') motor
-                //-         option(value='6 ') animals
-                //-         option(value='7 ') kindergarten
-                //-         option(value='8 ') other
-                //-       label.label-icon(for='search ')
-                //-         i.material-icons dehaze
+                  li.filters
+                    .input-field.inputsNavDiv
+                      input#search(type='search', placeholder='location', name='location', value = '', required='', autofocus='')
+                      label.label-icon(for='search')
+                        i.material-icons location_on
+                  li.filters
+                    .input-field.inputsNavDiv
+                      input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM ', min-view='year ', placeholder='time ', moment-picker='ctrl.input ', value = '', name='time')
+                      label.label-icon(for='search ')
+                          i.material-icons access_time
+                  li.filters
+                    .input-field.inputsNavDiv
+                      select(name='category')
+                        option.grey-text(value='', selected=' ') category
+                        option(value='health') health
+                        option(value='beautyCare') beautyCare
+                        option(value='vestry') vestry
+                        option(value='restoration') restoration
+                        option(value='motor') motor
+                        option(value='animals') animals
+                        option(value='kindergarten') kindergarten
+                        option(value='other') other
+                      label.label-icon(for='search ')
+                        i.material-icons dehaze
               ul#nav-mobile.side-nav
                 li
                   a(href='#intro ') Service

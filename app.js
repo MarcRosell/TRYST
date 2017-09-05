@@ -51,10 +51,9 @@ app.get('/user', (req, res) => {
 /* form handling */
 
 app.post('/search', (req, res) => {
-    const query = req.body.query
-
+    const {search,category,location,time} = req.body
     Commerce
-        .find({ name: new RegExp(query, 'i') })
+        .find({ name: new RegExp(search, 'i'), category: new RegExp(category, 'i'), location: new RegExp(location, 'i')})
         .sort({ name: 1 })
         .exec((err, commerces) => {
             if (err) return res.send('search error')
@@ -161,10 +160,6 @@ app.put('/api/book/:id', (req, res) => {
             })
         })
 })
-
-
-
-
 
 //app.use(routesApp)
 app.listen(PORT)

@@ -9,7 +9,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    Materialize.toast('Sort By Proximity', 3000, 'rounded')
+    Materialize.toast('Sort By Name', 3000, 'rounded')
 });
 
 $(document).ready(function() {
@@ -17,7 +17,6 @@ $(document).ready(function() {
         $(".details").toggle();
     });
 });
-
 
 $(document).ready(function() {
 
@@ -68,25 +67,6 @@ $(document).ready(function() {
 });
 
 
-
-
-// $(document).ready(function(){
-// const btn = document.getElementById('info-activate')
-// const btnClose = document.getElementById('btnClose')
-// const modal = document.getElementById('info-modal')
-
-
-// btn.onclick = function () {
-//    modal.style.display = 'block'
-// }
-
-// btnClose.onclick = function () {   
-// modal.style.display = 'none' 
-// }
-// });
-
-
-
 /* Open */
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
@@ -102,7 +82,7 @@ function closeNav() {
 $('#search')
     .keypress(function(e) {
         if (e.which === 13) {
-            $('#search-form').submit();
+            $('#search').submit();
             
             return false;
         }

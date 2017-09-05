@@ -12,40 +12,37 @@ block content
       nav#nav_f.default_color(role='navigation')
         .container
           .nav-wrapper
-            a#logo-container.brand-logo.filters.center.valign-wrapper(href='#')
+            a#logo-container.brand-logo.filters.center.valign-wrapper(href='/')
               img.logo(src='img/logo.png')
             ul.left.hide-on-med-and-down
-              li#openSearch
-                form
+              form#search(action='/search', method='post')
+                li#openSearch
                   .input-field.inputsNavDiv
-                    input#search(type='search', required='', autofocus='')
+                    input#search(type='search', name='search', required='true', autofocus='')
                     label.label-icon(placeholder='WHAT?', for='search')
                       i.material-icons search
-              li.hide.filters
-                form
+                li.hide.filters
                   .input-field.inputsNavDiv
-                    input#search(type='search', placeholder='location', required='', autofocus='')
+                    input#search(type='search', placeholder='location', name='location', value = '', required='', autofocus='')
                     label.label-icon(for='search')
                       i.material-icons location_on
-              li.hide.filters
-                form
+                li.hide.filters
                   .input-field.inputsNavDiv
-                    input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM', min-view='year ', placeholder='time', moment-picker='ctrl.input ')
+                    input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM ', min-view='year ', placeholder='time ', moment-picker='ctrl.input ', value = '', name='time')
                     label.label-icon(for='search ')
-                      i.material-icons access_time
-              li.hide.filters
-                form
+                        i.material-icons access_time
+                li.hide.filters
                   .input-field.inputsNavDiv
-                    select
-                      option.grey-text(value='0', selected='') category
-                      option(value='1') health
-                      option(value='2') beautyCare
-                      option(value='3') vestry
-                      option(value='4') restoration
-                      option(value='5') motor
-                      option(value='6') animals
-                      option(value='7') kindergarten
-                      option(value='8') other
+                    select(name='category')
+                      option#search.grey-text(value='', selected=' ') category
+                      option#search(value='health') health
+                      option#search(value='beautyCare') beautyCare
+                      option#search(value='vestry') vestry
+                      option#search(value='restoration') restoration
+                      option#search(value='motor') motor
+                      option#search(value='animals') animals
+                      option#search(value='kindergarten') kindergarten
+                      option#search(value='other') other
                     label.label-icon(for='search ')
                       i.material-icons dehaze
             ul.right.hide-on-med-and-down
@@ -92,7 +89,7 @@ block content
                     p #{commerce.location}
                 .card-reveal
                   span.card-title.grey-text.text-darken-4
-                    | Card Title
+                    | #{commerce.name}
                     i.material-icons.right close
                   p
                     | #{commerce.description}
@@ -271,3 +268,6 @@ block content
                       button.btn-flat.waves-effect.waves-light(type='submit', name='action')
                         | sign in
                         i.material-icons.right done_all
+
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js')
+
