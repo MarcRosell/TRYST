@@ -9,7 +9,7 @@ var CommerceSchema = new mongoose.Schema(
     user: { type: ObjectId, ref: 'User' },
     commerce: { type: ObjectId, ref: 'Commerce' },
     date: String,
-    service: String
+    service: String 
 }, { collection })
 
 

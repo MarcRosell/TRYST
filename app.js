@@ -40,10 +40,6 @@ app.get('/configuration', (req, res) => {
     res.render('pages/config')
 })
 
-app.get('/appointments', (req, res) => {
-    res.render('pages/appointments')
-})
-
 app.get('/user', (req, res) => {
     res.render('pages/user')
 })
@@ -85,16 +81,16 @@ app.get('/api/user/:id', (req, res) => {
         })
 })
 
-app.post('/api/register', (req, res) => {
-    const { firstname, lastname, email, password } = req.body
-    const user = new User({ firstname: firstname, lastname: lastname, email: email, password: password, image: image })
-        (user, password, err => {
-            if (err) {
-                return res.redirect('/home')
-            }
-            res.redirect('/home')
-        })
-})
+// app.post('/api/register', (req, res) => {
+//     const { firstname, lastname, email, password } = req.body
+//     const user = new User({ firstname: firstname, lastname: lastname, email: email, password: password, image: image })
+//         (user, password, err => {
+//             if (err) {
+//                 return res.redirect('/home')
+//             }
+//             res.redirect('/home')
+//         })
+// })
 
 app.post('/api/user/update', (req, res) => {
     var { _id, firstname, lastname, email, password } = req.body
@@ -106,7 +102,7 @@ app.post('/api/user/update', (req, res) => {
 app.get('/api/user/:id', (req, res) => {
     const id = req.params.id
     User
-        .findById(id)
+        .findById(id).populate(appointments)
         .then(user => {
             res.send({
                 result: 'OK',
@@ -159,7 +155,35 @@ app.put('/api/book/:id', (req, res) => {
                 message: err
             })
         })
-})
+    User.findByIdAndUpdate(id, { $push: { appointments: { date: appointmentDate } } })
+        .then(data => {
+            res.send({
+                result: 'OK',
+                message: 'appoinment added correctly',
+                data: data
+            })
+        })
+        .catch(err => {
+            res.send({
+                result: 'KO',
+                message: err
+            })
+        })
+    Appoinment.findByIdAndUpdate(id, { $push: { appointments: { date: appointmentDate } } })
+        .then(data => {
+            res.send({
+                result: 'OK',
+                message: 'appoinment added correctly',
+                data: data
+            })
+        })
+        .catch(err => {
+            res.send({
+                result: 'KO',
+                message: err
+            })
+        })
+    })
 
 //app.use(routesApp)
 app.listen(PORT)

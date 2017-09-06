@@ -1,7 +1,7 @@
 angular.module('Demo')
     .config(function ($routeProvider) {
       $routeProvider
-            .when('/config', {
+            .when('/appointments', {
               templateUrl: 'js/routes/appoinments/appoinments.html',
               controller: 'appointmentsController'
             })
