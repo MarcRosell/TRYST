@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const collection = 'users'
+const Schema = mongoose.Schema
+const ObjectId = Schema.Types.ObjectId
+
 
 var UserSchema = new mongoose.Schema({
   firstname: String,
@@ -7,12 +10,9 @@ var UserSchema = new mongoose.Schema({
   image: String,
   email: String,
   password: String,
-  appointments: [{ type: mongoose.Schema.ObjectId,
-                    ref: "Commerce",
-                    date: Date,
-                    service: String,
-                    duration: Number,
-                }],
+  appointments: [{ 
+     type: ObjectId, ref: 'Appointment' 
+  }]
 }, { collection })
 
 module.exports = mongoose.model('User', UserSchema);

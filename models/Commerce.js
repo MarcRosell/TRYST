@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const collection = 'commerce'
+const Schema = mongoose.Schema
+const ObjectId = Schema.Types.ObjectId
+
 
 var CommerceSchema = new mongoose.Schema(
 {
@@ -9,20 +12,13 @@ var CommerceSchema = new mongoose.Schema(
     location: String,
     description: String,
     services: [{
-        service: String,
-        time: Number,
-        price: Number
-        },
-        {
-        service: String,
+        id: String, // 'cortar-pelo'
         time: Number,
         price: Number
         }
     ],
-    appoinments: [{
-        user: String,
-        date: String,
-        service: String
+    appointments: [{ 
+         type: ObjectId, ref: 'Appointment' 
     }],
     logo: String,
     img: String
