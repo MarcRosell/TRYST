@@ -17,9 +17,6 @@ var CommerceSchema = new mongoose.Schema(
         price: Number
         }
     ],
-    appointments: [{ 
-         type: ObjectId, ref: 'Appointment' 
-    }],
     logo: String,
     img: String
 }, { collection })
