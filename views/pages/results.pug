@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  body#top.scrollspy(ng-cloak='', ng-controller='DemoController as ctrl')
+  body#top.scrollspy(ng-cloak)
     // Pre Loader
     #loader-wrapper
       #loader
@@ -28,7 +28,7 @@ block content
                       i.material-icons location_on
                 li.hide.filters
                   .input-field.inputsNavDiv
-                    input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM ', min-view='year ', placeholder='time ', moment-picker='ctrl.input ', value = '', name='time')
+                    input#search.form-control.input-field(type='search', required='', autofocus='', ng-model='ctrl.input ', ng-model-options="{ updateOn: 'blur' } ", locale='ca ', format='LT DD/MM ', min-view='year ', placeholder='time ', _moment-picker='ctrl.input ', value = '', name='time')
                     label.label-icon(for='search ')
                         i.material-icons access_time
                 li.hide.filters
@@ -95,7 +95,7 @@ block content
                     | #{commerce.description}
           .col.s12.m7.details
             each commerce, index in commerces
-              .card.reserve(class=('detail-' + index))
+              .card.reserve(class=('detail-' + index), ng-controller='CardController as ctrl')
                 .card-content
                 .card-tabs
                   ul.tabs.tabs-fixed-width
@@ -161,7 +161,7 @@ block content
                         .row
                           #cardProfile.col.s12
                             .card
-                              div(moment-picker='ctrl.myInput', locale='ca', format='L LT', min-view='year', today='true', inline='true')
+                              div(moment-picker='ctrl.date', locale='ca', format='L LT', min-view='year', today='true', inline='true')
                             .card
                               #appointBox.card-content
                                 .row
@@ -169,7 +169,7 @@ block content
                                     .row
                                       .input-field.col.s6
                                         select(disabled='')
-                                          option(value='', disabled='', selected='') {{ ctrl.myInput }}
+                                          option(value='', disabled='', selected='') {{ ctrl.date }}
                                         label Appointment Date (Select it in the calendar)
                                       .input-field.col.s6
                                         select
@@ -181,7 +181,7 @@ block content
                                         textarea#textarea1.materialize-textarea(data-length='120')
                                         label(for='textarea1')  Extra Details
                                       .col.s6
-                                        button.btnopen.btn-flat.waves-effect.waves-light.valign-wrapper.modalBtn(type='submit', name='action', data-target='modal1')
+                                        button.btnopen.btn-flat.waves-effect.waves-light.valign-wrapper.modalBtn(ng-click='ctrl.confirm()')
                                           | Confirm
                                           i.material-icons.right done_all
                   #confirm
@@ -269,6 +269,4 @@ block content
                       button.btn-flat.waves-effect.waves-light(type='submit', name='action')
                         | sign in
                         i.material-icons.right done_all
-
-  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js')
 

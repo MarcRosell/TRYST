@@ -47,9 +47,9 @@ app.get('/user', (req, res) => {
 /* form handling */
 
 app.post('/search', (req, res) => {
-    const {search,category,location,time} = req.body
+    const { search, category, location, time } = req.body
     Commerce
-        .find({ name: new RegExp(search, 'i'), category: new RegExp(category, 'i'), location: new RegExp(location, 'i')})
+        .find({ name: new RegExp(search, 'i'), category: new RegExp(category, 'i'), location: new RegExp(location, 'i') })
         .sort({ name: 1 })
         .exec((err, commerces) => {
             if (err) return res.send('search error')
@@ -133,57 +133,36 @@ app.put('/api/user/:id/remove/:appointmentDate', (req, res) => {
         .catch(err => {
             res.send({
                 result: 'KO',
-                message: err
+                message: 'error while removing appointment',
+                error: err
             })
         })
 })
 
 
-app.put('/api/book/:id', (req, res) => {
-    var { id } = req.params
-    Commerce.findByIdAndUpdate(id, { $push: { appointments: { date: appointmentDate } } })
-        .then(data => {
-            res.send({
-                result: 'OK',
-                message: 'appoinment added correctly',
-                data: data
-            })
-        })
-        .catch(err => {
-            res.send({
-                result: 'KO',
-                message: err
-            })
-        })
-    User.findByIdAndUpdate(id, { $push: { appointments: { date: appointmentDate } } })
-        .then(data => {
-            res.send({
-                result: 'OK',
-                message: 'appoinment added correctly',
-                data: data
-            })
-        })
-        .catch(err => {
-            res.send({
-                result: 'KO',
-                message: err
-            })
-        })
-    Appoinment.findByIdAndUpdate(id, { $push: { appointments: { date: appointmentDate } } })
-        .then(data => {
-            res.send({
-                result: 'OK',
-                message: 'appoinment added correctly',
-                data: data
-            })
-        })
-        .catch(err => {
-            res.send({
-                result: 'KO',
-                message: err
-            })
-        })
+app.post('/api/appointment', (req, res) => {
+    var { userId, commerceId, serviceName } = req.body
+
+    const appointment = new Appoinment({
+        user: userId,
+        commerce: commerceId,
+        service: serviceName
     })
+
+    appointment.save(function(err) {
+        if (err) return res.send({
+            resutl: 'KO',
+            message: 'error creating appointment',
+            error: err
+        })
+        
+        res.send({
+            result: 'OK',
+            message: 'appointment created successfully'
+        })
+    });
+
+})
 
 //app.use(routesApp)
 app.listen(PORT)

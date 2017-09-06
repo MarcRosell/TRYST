@@ -8,7 +8,7 @@ var AppointmentSchema = new mongoose.Schema(
 {
     user: { type: ObjectId, ref: 'User' },
     commerce: { type: ObjectId, ref: 'Commerce' },
-    date: String,
+    date: Number,
     service: String 
 }, { collection })
 
