@@ -1,13 +1,13 @@
 angular.module('Demo')
-    .controller('appoinmentsController', function($scope, appoinmentsService, $location) {
+    .controller('appointmentsController', function($scope, appointmentsService, userService, $location) {
 
-        appoinmentsService.getAppointments(id)
+        appointmentsService.getAppointments(userService.getUser().id)
             .then(function(appoinments) {
                 $scope.appoinments = appoinments
             })
 
         $scope.removeAppointment = function(id, date) {
-            appoinmentsService.removeAppointment(id, date)
+            appointmentsService.removeAppointment(id, date)
         }
 
     })

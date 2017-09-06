@@ -2,6 +2,14 @@ angular.module('Demo')
 
     .factory('userService', function($http) {
 
+        var user = {
+            id: '59ad3ccf6a9878e5c9696dde'
+        }
+
+        var getUser = function() {
+            return user
+        }
+
         var getInfoUser = function(id) {
             var url = 'api/user/' + id
             return $http.get(url)
@@ -20,6 +28,7 @@ angular.module('Demo')
         }
 
         return {
+            getUser: getUser,
             getInfoUser: getInfoUser,
             updateProfile:updateProfile
         }
