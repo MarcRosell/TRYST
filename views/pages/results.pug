@@ -6,6 +6,8 @@ block content
       .row.all
         .row
           .col.s12.m5
+            if user
+              p You're logged in as #{user.firstname}
             each commerce, index in commerces
               .card.horizontal
                 .card-image.waves-effect.waves-block.waves-light
@@ -158,7 +160,7 @@ block content
       li
         .divider
       li
-        a.subheader
+        a(href='/logout').subheader
           i.material-icons.red-text.user-icons
             | exit_to_app
           | Log Out

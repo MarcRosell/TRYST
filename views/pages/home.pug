@@ -24,7 +24,7 @@ block content
                 a(href='#intro')
                   span Register
               li
-                a(href='#work')
+                a(onclick='openNav()')
                   span Sign In
             ul#nav-mobile.side-nav
               li
@@ -131,8 +131,8 @@ block content
                     label(for='password') Password
                 .row
                   .input-field.col.s12
-                    input#email.validate(type='email')
-                    label(for='email', data-error='wrong', data-success='right', name = 'email') Email
+                    input#email.validate(type='email' name = 'email')
+                    label(for='email', data-error='wrong', data-success='right') Email
                 button.btn-flat.waves-effect.waves-light(type='submit', name='action')
                   | Sign Up
                   i.material-icons.right done_all
@@ -177,4 +177,37 @@ block content
           .row
             .col.offset-s4.s6
               button.waves-effect.waves-light.btn.valign-wrapper.black I Want + Information
+      #myNav.overlay
+        // Button to close the overlay navigation
+        a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+        // Overlay content
+        .overlay-content
+          div
+            .container
+              .row
+                .col.s6
+                  h5.header.text_h2.left-align
+                    span.span_h2  Find 
+                    |  any commerce providing your 
+                    span.span_h2  need 
+                    |  via proximity, name, category or by
+                    span.span_h2  the desired schedule 
+                    |  and 
+                    span.span_h2  make an online sync appointment
+                  button.btn.black.waves-effect.waves-light(type='submit', name='action')
+                    | Sign up
+                    i.material-icons.right done_all
+                .col.s6
+                  .row
+                    form.col.offset-s3.s9(action='/login', method = 'post')
+                      .row
+                        .input-field.col.s12
+                          input#password.validate(type='password' name='password')
+                          label(for='password') Password
+                      .row
+                        .input-field.col.s12
+                          input#email.validate(type='email' name='email')
+                          label(for='email', data-error='wrong', data-success='right') Email
+                      button.btn.black.waves-effect.waves-light(type='submit', name='action')
+                        | sign in
 

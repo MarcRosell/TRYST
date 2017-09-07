@@ -1,0 +1,52 @@
+extends ../layout
+
+block content
+	div
+		// Intro and service
+		.backgroundSearch
+			.row.all
+				.row
+					.col.m12.l5
+						each appointment, i in appoinments
+							// aqui seria al appointment ia el id de lempresa
+							.card.horizontal
+								.card-image.waves-effect.waves-block.waves-light
+									img(src='img/1.png')
+								.card-stacked
+									.card-content
+										h5.activator
+											b
+												a.name(href='') appointment.id.name
+											button.btn.red.cancel.waves-effect.waves-light.activator CANCEL
+										p appointment.service | appointment.date
+									.card-action
+										p appointment.id.adress
+								.card-reveal
+									span.card-title.grey-text.text-darken-4
+										| Are you sure?
+										a.btn.right.cancel.black(href='') Yes
+										i.btn.cancel.red.right(href='') No
+									p (You will be able to make another appointment)
+		ul#slide-out.side-nav.fixed.show-on-large
+			li.backgroundImgUser
+				.user-view
+					a(href='')
+						img.circle.responsive-img(src='img/user.jpg')
+					.user-name
+						a(href='')
+							span.white-text.name Marc Rosell
+			li.active
+				a.userPage(href='/userAppointments')
+					i.material-icons.user-icons.userPage blur_linear
+					span.userPage Appoinments
+			li
+				a(href='/user')
+					i.material-icons.user-icons settings
+					span Configuration
+			li
+				.divider
+			li
+				a.subheader
+					i.material-icons.red-text.user-icons
+						| exit_to_app
+					| Log Out

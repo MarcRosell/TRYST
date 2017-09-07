@@ -3,6 +3,9 @@ const mongoose = require('mongoose')
 const path = require('path')
 const bodyParser = require('body-parser')
 const cookieSession = require('cookie-session')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
+const passport = require('passport')
 
 
 const PORT = process.env.PORT || 3000
@@ -29,6 +32,49 @@ console.log(`db is connected to ${urlDB}`)
 app.use(express.static(path.join(__dirname, 'client')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(session({ secret: 'supersecretworddonottelltoanyone' }));
+
+
+/* AUTH */
+
+function handleLogin(req, res) {
+    const { user } = req
+    console.log(req.user)
+    req.session.user = user;
+    console.log(req.session)
+    console.log('logged');
+    res.redirect('/search')
+    }
+
+
+function handleLogout(req, res) {
+    req.logout()
+    res.redirect('/')
+}
+
+function isAuthenticated (req, res, next) {
+  if (req.isAuthenticated()) {
+    console.log('is authenticated')
+    return next()
+  }
+  console.log('redirecting to login...')
+  res.redirect('/login')
+}
+
+app.post('/login', passport.authenticate('local', {session: true}), handleLogin)
+app.get('/logout', handleLogout)
+
+
+const LocalStrategy = require('passport-local').Strategy
+passport.use(new LocalStrategy({
+  usernameField: 'email'
+}, User.authenticate()))
+
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 /* navigation handling */
 
@@ -36,18 +82,52 @@ app.get('/', (req, res) => {
     res.render('pages/home')
 })
 
-app.get('/configuration', (req, res) => {
+app.get('/login', (req, res) => {
+    res.render('pages/home')
+})
+
+
+app.get('/configuration', isAuthenticated,(req, res) => {
     res.render('pages/config')
 })
 
-app.get('/user', (req, res) => {
-    res.render('pages/user')
+app.get('/user',isAuthenticated, (req, res) => {
+    id = '59ad3ccf6a9878e5c9696dde'
+    User
+        .findById(id)
+        .then(user => {
+            res.render('pages/user', { user })
+        })
+        .catch(err => {
+            res.send({
+                result: 'KO',
+                message: err
+            })
+        })
 })
+
+app.get('/appointments', (req, res) => {
+    id = '59ad3ccf6a9878e5c9696dde'
+    User
+        .findById(id).populate('appointments')
+        .then(appoinments => {
+            res.render('pages/userAppointments', { appointments })
+        })
+        .catch(err => {
+            res.send({
+                result: 'KO',
+                message: err
+            })
+        })
+})
+
 
 /* form handling */
 
 app.post('/search', (req, res) => {
     const { search, category, location, time } = req.body
+    const { user } = req
+    console.log(req.session)
     Commerce
         .find({ name: new RegExp(search, 'i'), category: new RegExp(category, 'i'), location: new RegExp(location, 'i') })
         .sort({ name: 1 })
@@ -56,7 +136,7 @@ app.post('/search', (req, res) => {
 
             if (commerces.length === 0) return res.send('no results')
 
-            res.render('pages/results', { commerces })
+            res.render('pages/results', { commerces, user })
         })
 })
 
@@ -81,44 +161,26 @@ app.get('/api/user/:id', (req, res) => {
         })
 })
 
-// app.post('/api/register', (req, res) => {
-//     const { firstname, lastname, email, password } = req.body
-//     const user = new User({ firstname: firstname, lastname: lastname, email: email, password: password, image: image })
-//         (user, password, err => {
-//             if (err) {
-//                 return res.redirect('/home')
-//             }
-//             res.redirect('/home')
-//         })
-// })
+app.post('/api/register', (req, res) => {
+    const { email, password, firstname, lastname } = req.body
+    const user = new User({ email, firstname, lastname })
+    User.register(user, password, err => {
+        console.log('paso por register')
+        if (err) {
+            return res.send({ success: false, msg: 'Email already exists.' })
+        }
+        res.redirect('/login');
+    })
+
+})
 
 app.post('/api/user/update', (req, res) => {
     console.log('hola')
     const id = '59ad3ccf6a9878e5c9696dde'
 
     var { firstname, lastname, email, password } = req.body
-    User.findByIdAndUpdate(id, { $set: { firstname: firstname, lastname: lastname, email: email, password: password} })
-      .then(() => res.redirect('/user#!/user'))
-    })
-
-
-app.get('/api/user/:id', (req, res) => {
-    const id = req.params.id
-    User
-        .findById(id).populate(appointments)
-        .then(user => {
-            res.send({
-                result: 'OK',
-                message: 'User appointments found correctly',
-                data: user.appointments
-            })
-        })
-        .catch(err => {
-            res.send({
-                result: 'KO',
-                message: err
-            })
-        })
+    User.findByIdAndUpdate(id, { $set: { firstname: firstname, lastname: lastname, email: email, password: password } })
+        .then(() => res.redirect('/user'))
 })
 
 
@@ -159,7 +221,7 @@ app.post('/api/results/', (req, res) => {
             message: 'error creating appointment',
             error: err
         })
-        
+
         res.send({
             result: 'OK',
             message: 'appointment created successfully'
