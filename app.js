@@ -140,13 +140,14 @@ app.put('/api/user/:id/remove/:appointmentDate', (req, res) => {
 })
 
 
-app.post('/api/appointment', (req, res) => {
-    var { userId, commerceId, serviceName } = req.body
-
+app.post('/api/results/', (req, res) => {
+    console.log(req.data)
+    var { userId, commerceId, serviceName, time } = req.data
     const appointment = new Appoinment({
         user: userId,
         commerce: commerceId,
-        service: serviceName
+        service: serviceName,
+        date: time
     })
 
     appointment.save(function(err) {

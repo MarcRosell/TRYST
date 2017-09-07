@@ -1,6 +1,6 @@
 angular.module('Demo')
 
-    .controller('profileController', function($scope, userService, $window) {
+    .controller('userController', function($scope, userService, $window) {
 
     	const id = '59ad3ccf6a9878e5c9696dde'
 

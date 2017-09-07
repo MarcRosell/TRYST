@@ -1,0 +1,64 @@
+<div ng-controller="userController">
+
+    <!--user-->
+    <div class="row all backgroundSearch">
+    <form class="col offset-s4 s4">
+    <div class = "config">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="first_name" value="{{ user.firstname }}" type="text" class="validate">
+          <label class = "active" for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6 ">
+          <input id="last_name" value="{{ user.lastname }}" type="text" class="validate">
+          <label class = "active" for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" value="{{ user.email }}" type="email" class="validate">
+          <label class = "active" for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" value="{{ user.password }}" type="password" class="validate">
+          <label class = "active" for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="file-field input-field">
+      <div class="btn black">
+        <span>CHANGE IMAGE</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper inputImg">
+        <input class="file-path validate inputImg" type="text">
+      </div>
+    </div>
+
+      </div>
+    </form>
+  </div>
+        
+</div>
+
+    <ul id="slide-out" class="side-nav fixed show-on-large">
+            <li class="backgroundImgUser">
+                <div class="user-view">
+                    <a href=""><img class="circle responsive-img" src="img/user.jpg"></a>
+                    <div class = "user-name ">
+                    <a href=""><span class="white-text name">Marc Rosell</span></a>
+                    </div>
+            </div>
+            </li>
+            <li ><a href="/user#!/appointments" class = "userPage "><i class="material-icons user-icons userPage">blur_linear</i><span class = "userPage ">Appoinments</span></a></li>
+            <li class = "active "><a href="/user#!/user"><i class="material-icons user-icons">settings</i><span>Configuration</span></a></li>
+            <li>
+                <div class="divider "></div>
+            </li>
+            <li><a class="subheader "><i class="material-icons red-text user-icons ">exit_to_app
+</i>Log Out</a></li>
+        </ul>
+
+</div>

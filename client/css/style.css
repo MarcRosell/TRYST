@@ -9,7 +9,6 @@
     text-overflow:ellipsis;
 }
 
-
 .config {
     margin-left: 200px;
     background-color: white;
@@ -113,7 +112,7 @@ border-bottom: 1px solid lightgray;
         display: flex;
         max-height: 150px;
         overflow: hidden;
-        box-shadow: #FACCC1 -7px 7px 0px;
+        box-shadow: #fababa -7px 7px 0px;
         border: 1px solid lightgray;
         opacity: 1;
 }
@@ -213,7 +212,7 @@ div.fondo {
     position: static;
     height: 280px;
     width: 100px;
-    background-image: linear-gradient(to top, #feada6 0%, #facfff 99%, #faefef 100%);
+    background-image: linear-gradient(to top, #FFEF88 0%, #FFEF88 99%, #FFEF88 100%);
 }
 
 .backgroundImgUser{
@@ -225,13 +224,13 @@ div.fondo {
 
 div.fondo2 {
     position: static;
-    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background-image: linear-gradient(to top, #FFEF88 0%, #FFEF88 99%, #FFEF88 100%);
 }
 
 div.fondo3 {
     position: static;
     height: 330px;
-    background-image: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    background-image: linear-gradient(to top, #FFEF88 0%, #FFEF88 99%, #FFEF88 100%);
 }
 nav .input-field label i{
     color: #000 !important;
@@ -273,11 +272,22 @@ nav .input-field label i{
     padding-top: 4rem;
 }
 
-#index-banner {
+.banner {
     min-height: 632px;
-    max-height: 764px;
-    position: relative;
-    background-color: #000;
+    height: 100vh;
+    background-image: linear-gradient(21deg, #000 44%, #ff77a1 0%, #feff00 100%);
+    z-index:1;
+    position: fixed;
+    width: 100%;
+}
+
+.banner-post {
+    min-height: 632px;
+    height: 100vh;
+    background-image: linear-gradient(21deg, #000 44%, #ff78a1 0%, #feff40 100%);
+    z-index: -1;
+    position: fixed;
+    width: 100%;
 }
 
 #nav_f {
@@ -335,9 +345,7 @@ nav .input-field label i{
     display: block;
 }
 
-
-#work{
-background-color: white;
+#work{ 
 }
 
 .text_pink {
@@ -410,7 +418,7 @@ nav ul a.hoover {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     height: 100%;
-    width: 50px;
+    width: 0px;
     background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
@@ -421,7 +429,7 @@ nav ul a.hoover {
 }
 
 .cd-headline.type .cd-words-wrapper.selected {
-    background-color: #000;
+    opacity: 0%;
 }
 
 .cd-headline.type .cd-words-wrapper.selected::after {
@@ -737,11 +745,12 @@ div.user-name {
 
 .navf2 {
     margin-left: 3%;
-    margin-right: 7%;
+    margin-right: 3%;
     width: auto;
     margin-top: -7%;
     border-radius: 100px;
     color: white;
+    height: 68px;
 }
 
 .cancel {
@@ -753,4 +762,45 @@ div.user-name {
 
 .iUser{
 line-height: inherit;
+}
+
+.select-wrapper input.select-dropdown:disabled {
+    padding-left: 0px !important;
+    width: 144.5px !important;
+    border-bottom: 0px;
+}
+
+ textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid black;
+    box-shadow: 0 0px 0 0 black;
+ }
+
+ .side-nav.fixed {
+    left: inherit;
+    right: 0;
+    position: fixed;
+    width: 200px;
+}
+
+#info1{
+    background-color: white;
+    margin-top: 80%;
+}
+
+#info2{
+    background-color: white;
+    margin-top: 10%;
+}
+
+.go {
+    color: black;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-left: 130%;
+}
+
+#selectNavHome{
+        width: 150px !important;
+
 }

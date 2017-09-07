@@ -1,4 +1,4 @@
-extends ../layout
+extends ../homeLayout
 
 block content
   body#top.scrollspy
@@ -40,16 +40,16 @@ block content
             a.button-collapse(href='#', data-activates='nav-mobile')
               i.mdi-navigation-menu
     // Hero
-    #index-banner.section.no-pad-bot
+    #index-banner.banner.section.no-pad-bot
       .container
         h1.text_h.center.header.cd-headline.letters.type
           span Book
           span.cd-words-wrapper.waiting
-            b.is-visible  with TRYST
+            b.is-visible.black-text  with TRYST
+            b  w/ a dentist
             b  in a restaurant
-            b  with a dentist
             b  anywhere
-            b  with TRYST
+            b.black-text  with TRYST
             b  for a hair cut
             b  w/ a therapist
       div
@@ -74,7 +74,7 @@ block content
                       label.label-icon(for='search ')
                           i.material-icons access_time
                   li.filters
-                    .input-field.inputsNavDiv
+                    .input-field.inputsNavDiv#selectNavHome
                       select(name='category')
                         option.grey-text(value='', selected=' ') category
                         option(value='health') health
@@ -87,6 +87,8 @@ block content
                         option(value='other') other
                       label.label-icon(for='search ')
                         i.material-icons dehaze
+                  li
+                    a(href='#', onclick="$(this).closest('form').submit(); return false;")#search.go GO!
               ul#nav-mobile.side-nav
                 li
                   a(href='#intro ') Service
@@ -100,11 +102,11 @@ block content
                   a(href='https://github.com/joashp/material-design-template ', target='_blank ') Download
               a.button-collapse(href='# ', data-activates='nav-mobile ')
                 i.mdi-navigation-menu
-    .section.scrollspy
-      #intro.container
-        .row
+    .section
+      .container
+        .row#info1
           .col.s12
-            h2.center.header.text_h2
+            h3.center.header.text_h2
               span.span_h2  find 
               |  any commerce providing your 
               span.span_h2  need 
@@ -112,6 +114,7 @@ block content
               span.span_h2  the desired schedule 
               |  and 
               span.span_h2  make an online sync appointment
+              span#intro.scrollspy
           .col.s12.offset-m4.m4.offset-l4.l4
             .row
               form.col.s12(action='/api/register', method = 'post')
@@ -134,9 +137,8 @@ block content
                   | Sign Up
                   i.material-icons.right done_all
     // Work
-    .section.scrollspy
-      .container
-        h1#work.header.text_b
+    .section
+      .container#info2
         .row
           div
             .fondo.card-panel.teal.col.s3
@@ -144,7 +146,7 @@ block content
                 h5
                   | Write in our seeker what you want, then filter by hour, localization or through your preferences
                 i.material-icons.small location_searching
-          .col.offset-s4.s5
+          .col.offset-s4.s5#work.scrollspy
             h2  
             img.queryShot(src='img/query.png ')
         .row
@@ -175,8 +177,4 @@ block content
           .row
             .col.offset-s4.s6
               button.waves-effect.waves-light.btn.valign-wrapper.black I Want + Information
-    //
-      Parallax
-      <div class="parallax-container ">
-      <div class="parallax "><img src="img/parallax1.png "></div>
-      </div>
+
