@@ -2,40 +2,50 @@
 
     <!--user-->
     <div class="row all backgroundSearch">
-    <form class="col offset-s4 s4">
+    <form class="col offset-s4 s4" action="/api/user/update" method="POST">
     <div class = "config">
       <div class="row">
         <div class="input-field col s6">
-          <input  id="first_name" value="{{ user.firstname }}" type="text" class="validate">
+          <input  id="first_name" value="{{ user.firstname }}" type="text" name = "firstname" class="validate">
           <label class = "active" for="first_name">First Name</label>
         </div>
         <div class="input-field col s6 ">
-          <input id="last_name" value="{{ user.lastname }}" type="text" class="validate">
+          <input id="last_name" value="{{ user.lastname }}" type="text" name = "lastname" class="validate">
           <label class = "active" for="last_name">Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="email" value="{{ user.email }}" type="email" class="validate">
+          <input id="email" value="{{ user.email }}" type="email" name = "email"  class="validate">
           <label class = "active" for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" value="{{ user.password }}" type="password" class="validate">
+          <input id="password" value="{{ user.password }}" name = "password" type="password" class="validate">
           <label class = "active" for="password">Password</label>
         </div>
       </div>
       <div class="row">
-        <div class="file-field input-field">
-      <div class="btn black">
-        <span>CHANGE IMAGE</span>
+        <div class="file-field input-field col s12">
+              <button class="btn black waves-effect waves-light" name = "image"  type="submit" name="action">change image
+             <i class="material-icons right"></i>
         <input type="file">
-      </div>
       <div class="file-path-wrapper inputImg">
         <input class="file-path validate inputImg" type="text">
       </div>
-    </div>
+      </button>
+      </div>
+      </div>
+      <div class="row">
+      <div class="file-field input-field col s12">
+              <button class="btn black waves-effect waves-light" type="submit" name="action">update profile
+             <i class="material-icons right">send</i>
+  </button>
+      </div>
+      </div>
+
+    
 
       </div>
     </form>

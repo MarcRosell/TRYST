@@ -93,11 +93,14 @@ app.get('/api/user/:id', (req, res) => {
 // })
 
 app.post('/api/user/update', (req, res) => {
-    var { _id, firstname, lastname, email, password } = req.body
-    User.findByIdAndUpdate(_id, { $set: { firstname: firstname, lastname: lastname, email: email, password: password, image: image } }, function(err, tank) {
-        res.redirect('/user#!/profile')
+    console.log('hola')
+    const id = '59ad3ccf6a9878e5c9696dde'
+
+    var { firstname, lastname, email, password } = req.body
+    User.findByIdAndUpdate(id, { $set: { firstname: firstname, lastname: lastname, email: email, password: password} })
+      .then(() => res.redirect('/user#!/user'))
     })
-})
+
 
 app.get('/api/user/:id', (req, res) => {
     const id = req.params.id
