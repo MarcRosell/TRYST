@@ -2,7 +2,7 @@ angular
     .module('Demo')
     .controller('CardController', ['$scope', function($http) {
         this.date = 'click in calendar'
-const userId = '59ad3ccf6a9878e5c9696dde'
+        const userId = '59ad3ccf6a9878e5c9696dde'
 
         this.confirm = function() {
             console.log('make call to api for creating an appointment with date', this.date)
@@ -16,22 +16,24 @@ const userId = '59ad3ccf6a9878e5c9696dde'
             //         window.location.reload()
             //     })
 
-            return $http({
-                method: 'POST',
-                url: '/api/results/',
-                headers: {
-                    'Content-Type': 'text/plain'
-                },
-                data: {
-                    userId: userId,
-                    commerceId: commerceId,
-                    serviceName: serviceName,
-                    time: getTimeStamp[1]
-                }
-            }).then(function(response) {
-                console.log('updated')
-                window.location.reload()
-            })
+            // return $http({
+            //     method: 'POST',
+            //     url: '/api/results/',
+            //     headers: {
+            //         'Content-Type': 'text/plain'
+            //     },
+            //     data: {
+            //         userId: userId,
+            //         commerceId: commerceId,
+            //         serviceName: serviceName,
+            //         time: getTimeStamp[1]
+            //     }
+            // }).then(function(response) {
+            //     console.log('updated')
+            //     window.location.reload()
+            // })
+
+            this.confirmed = true
 
         }
     }]);
