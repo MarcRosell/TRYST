@@ -103,19 +103,19 @@ app.get('/user',isAuthenticated, (req, res) => {
         })
 })
 
-app.get('/appointments', (req, res) => {
-    id = '59ad3ccf6a9878e5c9696dde'
-    User
-        .findById(id).populate('appointments')
-        .then(appoinments => {
-            res.render('pages/userAppointments', { appointments })
-        })
-        .catch(err => {
-            res.send({
-                result: 'KO',
-                message: err
-            })
-        })
+app.get('/appointments', isAuthenticated, (req, res) => {
+    res.render('pages/userAppointments', {user: req.session.user})
+    // User
+    //     .findById(id).populate('appointments')
+    //     .then(appoinments => {
+    //         res.render('pages/userAppointments', { appointments })
+    //     })
+    //     .catch(err => {
+    //         res.send({
+    //             result: 'KO',
+    //             message: err
+    //         })
+    //     })
 })
 
 
@@ -172,7 +172,7 @@ app.post('/api/register', (req, res) => {
 app.post('/api/user/update', (req, res) => {
     var { firstname, lastname, email} = req.body
     User.findByIdAndUpdate(req.session.user._id, { $set: { firstname: firstname, lastname: lastname} })
-        .then(() => res.redirect('/user', { user: req.session.user }))
+        .then(() => res.redirect('/user'))
 })
 
 

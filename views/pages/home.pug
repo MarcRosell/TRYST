@@ -24,7 +24,7 @@ block content
                 li
                   a.userNav(href='#', data-activates='slide-out', show-on-large='')
                     i.tiny.material-icons.right.iUser person
-                    span.filters Marc
+                    span.filters #{user.firstname}
               ul#nav-mobile.side-nav
                 li
                   a(href='#intro') Service
@@ -215,7 +215,7 @@ block content
               img.circle.responsive-img(src='img/user.jpg')
             .user-name
               a(href='')
-                span.white-text.name Marc Rosell
+                span.white-text.name #{user.firstname} #{user.lastname}
         li
           a(href='/appointments')
             i.material-icons.user-icons blur_linear
