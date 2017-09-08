@@ -138,62 +138,62 @@ block content
                                         h5.center-align EARN TIME PAYING NOW YOUR SERVICE
                                         button.waves-effect.waves-light.btn.valign-wrapper.black.center-align PAY NOW
           |
-
-    ul#slide-out.side-nav
-      li.backgroundImgUser
-        .user-view
-          a(href='')
-            img.circle.responsive-img(src='img/user.jpg')
-          .user-name
+    if user
+      ul#slide-out.side-nav
+        li.backgroundImgUser
+          .user-view
             a(href='')
-              span.white-text.name #{user.firstname} #{user.lastname}
-      li
-        a(href='/appointments')
-          i.material-icons.user-icons blur_linear
-          span Appoinments
-      li
-        a(href='/user')
-          i.material-icons.user-icons settings
-          span Configuration
-      li
-        .divider
-      li
-        a(href='/logout').subheader
-          i.material-icons.red-text.user-icons
-            | exit_to_app
-          | Log Out
+              img.circle.responsive-img(src='img/user.jpg')
+            .user-name
+              a(href='')
+                span.white-text.name #{user.firstname} #{user.lastname}
+        li
+          a(href='/appointments')
+            i.material-icons.user-icons blur_linear
+            span Appoinments
+        li
+          a(href='/user')
+            i.material-icons.user-icons settings
+            span Configuration
+        li
+          .divider
+        li
+          a(href='/logout').subheader
+            i.material-icons.red-text.user-icons
+              | exit_to_app
+            | Log Out
 
       </div>
 
 
-      // The overlay
-      #myNav.overlay
-        // Button to close the overlay navigation
-        a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-        // Overlay content
-        .overlay-content
-          div
-            .container
-              .row
-                .col.s6
-                  h5.header.text_h2.left-align
-                    span.span_h2  Find 
-                    |  any commerce providing your 
-                    span.span_h2  need 
-                    |  via proximity, name, category or by
-                    span.span_h2  the desired schedule 
-                    |  and 
-                    span.span_h2  make an online sync appointment
-                .col.s6
-                  .row
-                    form.col.offset-s3.s9(action='/login', method = 'post')
-                      .row
-                        .input-field.col.s12
-                          input#email.validate(type='email' name='email')
-                          label(for='email', data-error='wrong', data-success='right') Email
-                      .row
-                        .input-field.col.s12
-                          input#password.validate(type='password' name='password')
-                          label(for='password') Password
-                      button.btn.black.waves-effect.waves-light(type='submit', name='action')
-                        | sign in
+    // The overlay
+    #myNav.overlay
+      // Button to close the overlay navigation
+      a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+      // Overlay content
+      .overlay-content
+        div
+          .container
+            .row
+              .col.s6
+                h5.header.text_h2.left-align
+                  span.span_h2  Find 
+                  |  any commerce providing your 
+                  span.span_h2  need 
+                  |  via proximity, name, category or by
+                  span.span_h2  the desired schedule 
+                  |  and 
+                  span.span_h2  make an online sync appointment
+              .col.s6
+                .row
+                  form.col.offset-s3.s9(action='/login', method = 'post')
+                    .row
+                      .input-field.col.s12
+                        input#email.validate(type='email' name='email')
+                        label(for='email', data-error='wrong', data-success='right') Email
+                    .row
+                      .input-field.col.s12
+                        input#password.validate(type='password' name='password')
+                        label(for='password') Password
+                    button.btn.black.waves-effect.waves-light(type='submit', name='action')
+                      | sign in

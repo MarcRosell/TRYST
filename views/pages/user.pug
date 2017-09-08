@@ -30,26 +30,27 @@ block content
 						button.btn.black.waves-effect.waves-light(type='submit', name='action')
 							| update profile
 							i.material-icons.right send
-	ul#slide-out.side-nav.show-on-large
-		li.backgroundImgUser
-			.user-view
-				a(href='')
-					img.circle.responsive-img(src='img/user.jpg')
-				.user-name
+	if user
+		ul#slide-out.side-nav.show-on-large
+			li.backgroundImgUser
+				.user-view
 					a(href='')
-						span.white-text.name #{user.firstname} #{user.lastname}
-		li
-			a.userPage(href='/appointments')
-				i.material-icons.user-icons.userPage blur_linear
-				span.userPage Appoinments
-		li.active
-			a(href='/user')
-				i.material-icons.user-icons settings
-				span Configuration
-		li
-			.divider
-		li
-			a.subheader
-				i.material-icons.red-text.user-icons
-					| exit_to_app
-				| Log Out
+						img.circle.responsive-img(src='img/user.jpg')
+					.user-name
+						a(href='')
+							span.white-text.name #{user.firstname} #{user.lastname}
+			li
+				a.userPage(href='/appointments')
+					i.material-icons.user-icons.userPage blur_linear
+					span.userPage Appoinments
+			li.active
+				a(href='/user')
+					i.material-icons.user-icons settings
+					span Configuration
+			li
+				.divider
+			li
+				a(href='/logout').subheader
+					i.material-icons.red-text.user-icons
+						| exit_to_app
+					| Log Out

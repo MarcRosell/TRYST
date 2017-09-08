@@ -28,26 +28,27 @@ block content
 											a.btn.right.cancel.black(href='') Yes
 											i.btn.cancel.red.right(href='') No
 										p (You will be able to make another appointment)
-		ul#slide-out.side-nav.fixed.show-on-large
-			li.backgroundImgUser
-				.user-view
-					a(href='')
-						img.circle.responsive-img(src='img/user.jpg')
-					.user-name
+		if user
+			ul#slide-out.side-nav.fixed.show-on-large
+				li.backgroundImgUser
+					.user-view
 						a(href='')
-							span.white-text.name #{user.firstname} #{user.lastname}
-			li.active
-				a.userPage(href='/userAppointments')
-					i.material-icons.user-icons.userPage blur_linear
-					span.userPage Appoinments
-			li
-				a(href='/user')
-					i.material-icons.user-icons settings
-					span Configuration
-			li
-				.divider
-			li
-				a.subheader
-					i.material-icons.red-text.user-icons
-						| exit_to_app
-					| Log Out
+							img.circle.responsive-img(src='img/user.jpg')
+						.user-name
+							a(href='')
+								span.white-text.name #{user.firstname} #{user.lastname}
+				li.active
+					a.userPage(href='/userAppointments')
+						i.material-icons.user-icons.userPage blur_linear
+						span.userPage Appoinments
+				li
+					a(href='/user')
+						i.material-icons.user-icons settings
+						span Configuration
+				li
+					.divider
+				li
+					a.subheader
+						i.material-icons.red-text.user-icons
+							| exit_to_app
+						| Log Out

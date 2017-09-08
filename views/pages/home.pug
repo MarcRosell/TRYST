@@ -208,29 +208,30 @@ block content
           .row
             .col.offset-s4.s6
               button.waves-effect.waves-light.btn.valign-wrapper.black I Want + Information
-      ul#slide-out.side-nav
-        li.backgroundImgUser
-          .user-view
-            a(href='')
-              img.circle.responsive-img(src='img/user.jpg')
-            .user-name
+      if user
+        ul#slide-out.side-nav
+          li.backgroundImgUser
+            .user-view
               a(href='')
-                span.white-text.name #{user.firstname} #{user.lastname}
-        li
-          a(href='/appointments')
-            i.material-icons.user-icons blur_linear
-            span Appoinments
-        li
-          a(href='/user')
-            i.material-icons.user-icons settings
-            span Configuration
-        li
-          .divider
-        li
-          a(href='/logout').subheader
-            i.material-icons.red-text.user-icons
-              | exit_to_app
-            | Log Out
+                img.circle.responsive-img(src='img/user.jpg')
+              .user-name
+                a(href='')
+                  span.white-text.name #{user.firstname} #{user.lastname}
+          li
+            a(href='/appointments')
+              i.material-icons.user-icons blur_linear
+              span Appoinments
+          li
+            a(href='/user')
+              i.material-icons.user-icons settings
+              span Configuration
+          li
+            .divider
+          li
+            a(href='/logout').subheader
+              i.material-icons.red-text.user-icons
+                | exit_to_app
+              | Log Out
       #myNav.overlay
         // Button to close the overlay navigation
         a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
