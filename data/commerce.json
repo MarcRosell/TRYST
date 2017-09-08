@@ -1,1 +1,265 @@
-[{"_id":{"$oid":"59b29bb862d78b76c91d853c"},"name":"Dr Mariano","category":"Health","subcategory":"Therapist","location":"Verneda 20, 08960 Sant Just Desvern","description":"Our professionally trained Barbers take time to understand your desired hairstyle, whether its that brilliantly crafted fade or that natural fall of a Scissors Trim! Whatever your hair requirements , be sure to discuss it with us to get our professional advice! Crafted fade or that natural fall!","services":[{"id":"Terapia","time":"60","price":"77"},{"id":"Asesoramiento matrimonial","time":"15","price":"71"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjQqtGa2JXWAhUDuxQKHTqfDBoQjBwIBA\u0026url=http%3A%2F%2Fwww.buscatupsicologo.com%2Fwp-content%2Fuploads%2F2016%2F02%2Fxpsicologia-logotipo-1.jpg.pagespeed.ic.L3wmQtd6UV.jpg\u0026psig=AFQjCNGHOOTOSAfHa5rhk_iPmTnb54aAPw\u0026ust=1504963535260458","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjQqtGa2JXWAhUDuxQKHTqfDBoQjBwIBA\u0026url=http%3A%2F%2Fwww.buscatupsicologo.com%2Fwp-content%2Fuploads%2F2016%2F02%2Fxpsicologia-logotipo-1.jpg.pagespeed.ic.L3wmQtd6UV.jpg\u0026psig=AFQjCNGHOOTOSAfHa5rhk_iPmTnb54aAPw\u0026ust=1504963535260458"},{"_id":{"$oid":"59b29bb862d78b76c91d853d"},"name":"Nails","category":"BeautyCare","subcategory":"Cosmethic","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjk9r7w1pXWAhUDvhQKHdI5C7EQjBwIBA\u0026url=https%3A%2F%2Fimg.grouponcdn.com%2Fdeal%2FvQqFJZWUJ3Grov6Nwmca%2FML-3000x1800%2Fv1%2Fc700x420.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjk9r7w1pXWAhUDvhQKHdI5C7EQjBwIBA\u0026url=https%3A%2F%2Fimg.grouponcdn.com%2Fdeal%2FvQqFJZWUJ3Grov6Nwmca%2FML-3000x1800%2Fv1%2Fc700x420.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847"},{"_id":{"$oid":"59b29bb862d78b76c91d853e"},"name":"Red Boys","category":"BeautyCare","subcategory":"Cosmethic","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Biotecnología cosmética es una rama de la biotecnología aplicada a la industria, principalmente al cuidado estético de los seres humanos, manipulando organismos y células mediante análisis biológicos, microbiológicos, inmunológicos, bioquímicos, toxicológicos y químicos.1​","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwj__vT31pXWAhVGxxQKHWZ8DxUQjBwIBA\u0026url=http%3A%2F%2Fhochu.ua%2Fpictures_ckfinder%2Fimages%2F1356107677939.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwj__vT31pXWAhVGxxQKHWZ8DxUQjBwIBA\u0026url=http%3A%2F%2Fhochu.ua%2Fpictures_ckfinder%2Fimages%2F1356107677939.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847"},{"_id":{"$oid":"59b29bb862d78b76c91d853f"},"name":"MrHair","category":"BeautyCare","subcategory":"Hairdressing","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Las aplicaciones de la Biotecnología Cosmética más conocidas son las destinadas al cuidado de la piel. Esta rama de la biotecnología busca fundamentalmente contrarrestar los efectos de la contaminación en el cuerpo humano, así como falta de hidratación y protección solar, y de contrarrestar los signos de la edad causados por el indebido cuidado de la piel o por productos cosméticos químicos.","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjOkN6G15XWAhXKtRQKHWgTBOkQjBwIBA\u0026url=http%3A%2F%2Fwww.grupo.bg%2Fuploads%2Foffers%2Fhomepage_2c147442c1e421783dfef0fe1579655ebba2f74f.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjOkN6G15XWAhXKtRQKHWgTBOkQjBwIBA\u0026url=http%3A%2F%2Fwww.grupo.bg%2Fuploads%2Foffers%2Fhomepage_2c147442c1e421783dfef0fe1579655ebba2f74f.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847"},{"_id":{"$oid":"59b29bb862d78b76c91d8540"},"name":"People","category":"BeautyCare","subcategory":"Cosmethics","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Estudia las soluciones que, después de varios años de evolución, la naturaleza ha adoptado para los problemas que se han ido presentado en el entorno, posterior a este estudio, se pretende imitar dichos procesos para solucionar problemas a nivel humano. ","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwj2hI2U15XWAhUEPxQKHStdACEQjBwIBA\u0026url=http%3A%2F%2Fyeclaweb.com%2Fsites%2Fdefault%2Ffiles%2Fimages%2Flogos%2Fana-estilistas.jpg\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwj2hI2U15XWAhUEPxQKHStdACEQjBwIBA\u0026url=http%3A%2F%2Fyeclaweb.com%2Fsites%2Fdefault%2Ffiles%2Fimages%2Flogos%2Fana-estilistas.jpg\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923"},{"_id":{"$oid":"59b29c8262d78b76c91d8541"},"name":"Eyes","category":"BeautyCare","subcategory":"Cosmethics","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"El estudio de las células madres ha sido de gran ayuda en la biotecnología cosmética ya que se ha descubierto que tienen propiedades re-generativas que se comienzan a aplicar en el tratamiento anti-edad del cuerpo humano.","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjw0_ee15XWAhVLQBQKHRO2CjsQjBwIBA\u0026url=https%3A%2F%2Fwww.compraya.ec%2Fimagenes%2Festablecimiento%2Fjulia-belleza-04.jpg\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjw0_ee15XWAhVLQBQKHRO2CjsQjBwIBA\u0026url=https%3A%2F%2Fwww.compraya.ec%2Fimagenes%2Festablecimiento%2Fjulia-belleza-04.jpg\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923"},{"_id":{"$oid":"59b29c8262d78b76c91d8542"},"name":"Wind","category":"BeautyCare","subcategory":"Cosmethics","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjt4bao15XWAhWCtBQKHVxkAd4QjBwIBA\u0026url=http%3A%2F%2Fwww.gmkfreelogos.com%2Flogos%2FD%2Fimg%2FDiego_Suarez_Peluqueria.gif\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjt4bao15XWAhWCtBQKHVxkAd4QjBwIBA\u0026url=http%3A%2F%2Fwww.gmkfreelogos.com%2Flogos%2FD%2Fimg%2FDiego_Suarez_Peluqueria.gif\u0026psig=AFQjCNHFNCVmSQne-wijZZ6C3236i23oRg\u0026ust=1504963249481923"},{"_id":{"$oid":"59b29c8262d78b76c91d8543"},"name":"Hair \u0026 Beauty","category":"BeautyCare","subcategory":"Hairdressing","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwihzvr81ZXWAhXE6xQKHUKHBPEQjBwIBA\u0026url=https%3A%2F%2Fmygrandwedding.com%2Fwp-content%2Fsabai%2FFile%2Ffiles%2F09c2a6e28bff3e03583f49b8c5d403ce.jpg\u0026psig=AFQjCNFF_LytkiYPTso_5ozeNEoeWR2K7w\u0026ust=1504962935723915","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwihzvr81ZXWAhXE6xQKHUKHBPEQjBwIBA\u0026url=https%3A%2F%2Fmygrandwedding.com%2Fwp-content%2Fsabai%2FFile%2Ffiles%2F09c2a6e28bff3e03583f49b8c5d403ce.jpg\u0026psig=AFQjCNFF_LytkiYPTso_5ozeNEoeWR2K7w\u0026ust=1504962935723915"},{"_id":{"$oid":"59b29cc762d78b76c91d8544"},"name":"Yourself","category":"BeautyCare","subcategory":"Hairdressing","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Esta página contiene una lista de los artículos que la comunidad de Wikipedia en español ha identificado como artículos de una excelente calidad. ¡Evidentemente esta lista contiene solo una pequeña muestra de los artículos de Wikipedia!","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjbrcjN1pXWAhULvxQKHfWhBRoQjBwIBA\u0026url=http%3A%2F%2Finstitutofrancis.com%2Fimages%2Fservicios%2Fpeluqueria%2FPeluqueria.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjbrcjN1pXWAhULvxQKHfWhBRoQjBwIBA\u0026url=http%3A%2F%2Finstitutofrancis.com%2Fimages%2Fservicios%2Fpeluqueria%2FPeluqueria.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847"},{"_id":{"$oid":"59b29cc762d78b76c91d8545"},"name":"Tint","category":"BeautyCare","subcategory":"Hairdressing","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Con esta iniciativa animamos a cualquier persona a subir imágenes de monumentos bajo una licencia libre para su uso en los artículos de Wikipedia, en otros proyectos Wikimedia, y en cualquier otro lugar. Queremos ofrecer una visión global y de calidad del patrimonio cultural de cada país","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"img/LOGOPELU.png","img":"img/3.png"},{"_id":{"$oid":"59b29cc762d78b76c91d8546"},"name":"Women","category":"BeautyCare","subcategory":"Hairdressing","location":"C/ Alicante, 3 , Madrid, 28045, Madrid","description":"Cosmética es actualmente una disciplina de las ciencias de la salud. Entre sus objetivos está el de aplicar preparados para preservar o embellecer el cutis y el cabello. En los pueblos primitivos los cosméticos tienen un carácter mágico. ","services":[{"id":"Corte De Pelo Para Mujer ","time":"60","price":"40"},{"id":"Corte De Pelo Para Hombre","time":"40","price":"42"}],"logo":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjemuvh1pXWAhUJPhQKHQr0CB0QjBwIBA\u0026url=http%3A%2F%2Fwww.peluquerianatalia.com%2Fimg%2Fservicios%2Fslide%2Fservicio3-peluqueria-natalia.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847","img":"https://www.google.es/url?sa=i\u0026rct=j\u0026q=\u0026esrc=s\u0026source=images\u0026cd=\u0026cad=rja\u0026uact=8\u0026ved=0ahUKEwjemuvh1pXWAhUJPhQKHQr0CB0QjBwIBA\u0026url=http%3A%2F%2Fwww.peluquerianatalia.com%2Fimg%2Fservicios%2Fslide%2Fservicio3-peluqueria-natalia.jpg\u0026psig=AFQjCNH_aMrvr4wv7fHk4zOvj8XLJfNAUg\u0026ust=1504963104860847"}]
+[
+{
+    "_id":
+    {
+        "$oid": "59b29bb862d78b76c91d853c"
+    },
+    "name": "Dr Mariano",
+    "category": "Health",
+    "subcategory": "Therapist",
+    "location": "Verneda 20, 08960 Sant Just Desvern",
+    "description": "Our professionally trained Barbers take time to understand your desired hairstyle, whether its that brilliantly crafted fade or that natural fall of a Scissors Trim! Whatever your hair requirements , be sure to discuss it with us to get our professional advice! Crafted fade or that natural fall!",
+    "services": [
+    {
+        "id": "Terapia",
+        "time": "60",
+        "price": "77"
+    },
+    {
+        "id": "Asesoramiento matrimonial",
+        "time": "15",
+        "price": "71"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=1",
+    "img": "https://dummyimage.com/600x600/000/fff&text=1"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29bb862d78b76c91d853d"
+    },
+    "name": "Nails",
+    "category": "BeautyCare",
+    "subcategory": "Cosmethic",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=2",
+    "img": "https://dummyimage.com/600x600/000/fff&text=2"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29bb862d78b76c91d853e"
+    },
+    "name": "Red Boys",
+    "category": "BeautyCare",
+    "subcategory": "Cosmethic",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Biotecnología cosmética es una rama de la biotecnología aplicada a la industria, principalmente al cuidado estético de los seres humanos, manipulando organismos y células mediante análisis biológicos, microbiológicos, inmunológicos, bioquímicos, toxicológicos y químicos.1​",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=3",
+    "img": "https://dummyimage.com/600x600/000/fff&text=3"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29bb862d78b76c91d853f"
+    },
+    "name": "MrHair",
+    "category": "BeautyCare",
+    "subcategory": "Hairdressing",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Las aplicaciones de la Biotecnología Cosmética más conocidas son las destinadas al cuidado de la piel. Esta rama de la biotecnología busca fundamentalmente contrarrestar los efectos de la contaminación en el cuerpo humano, así como falta de hidratación y protección solar, y de contrarrestar los signos de la edad causados por el indebido cuidado de la piel o por productos cosméticos químicos.",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=4",
+    "img": "https://dummyimage.com/600x600/000/fff&text=4"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29bb862d78b76c91d8540"
+    },
+    "name": "People",
+    "category": "BeautyCare",
+    "subcategory": "Cosmethics",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Estudia las soluciones que, después de varios años de evolución, la naturaleza ha adoptado para los problemas que se han ido presentado en el entorno, posterior a este estudio, se pretende imitar dichos procesos para solucionar problemas a nivel humano. ",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=5",
+    "img": "https://dummyimage.com/600x600/000/fff&text=5"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29c8262d78b76c91d8541"
+    },
+    "name": "Eyes",
+    "category": "BeautyCare",
+    "subcategory": "Cosmethics",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "El estudio de las células madres ha sido de gran ayuda en la biotecnología cosmética ya que se ha descubierto que tienen propiedades re-generativas que se comienzan a aplicar en el tratamiento anti-edad del cuerpo humano.",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=6",
+    "img": "https://dummyimage.com/600x600/000/fff&text=6"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29c8262d78b76c91d8542"
+    },
+    "name": "Wind",
+    "category": "BeautyCare",
+    "subcategory": "Cosmethics",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=7",
+    "img": "https://dummyimage.com/600x600/000/fff&text=7"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29c8262d78b76c91d8543"
+    },
+    "name": "Hair \u0026 Beauty",
+    "category": "BeautyCare",
+    "subcategory": "Hairdressing",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Hair \u0026 Beauty está ubicado en la calle Alicante 3, en el barrio de Arganzuela de Madrid. Es un salón de peluquería y estética fundado por Erika Cañizares en junio de 2017, con la idea de ofrecer tratamientos capilares y estéticos profesionales, personalizados y con un trato cercano al cliente.",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=8",
+    "img": "https://dummyimage.com/600x600/000/fff&text=8"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29cc762d78b76c91d8544"
+    },
+    "name": "Yourself",
+    "category": "BeautyCare",
+    "subcategory": "Hairdressing",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Esta página contiene una lista de los artículos que la comunidad de Wikipedia en español ha identificado como artículos de una excelente calidad. ¡Evidentemente esta lista contiene solo una pequeña muestra de los artículos de Wikipedia!",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=9",
+    "img": "https://dummyimage.com/600x600/000/fff&text=9"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29cc762d78b76c91d8545"
+    },
+    "name": "Tint",
+    "category": "BeautyCare",
+    "subcategory": "Hairdressing",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Con esta iniciativa animamos a cualquier persona a subir imágenes de monumentos bajo una licencia libre para su uso en los artículos de Wikipedia, en otros proyectos Wikimedia, y en cualquier otro lugar. Queremos ofrecer una visión global y de calidad del patrimonio cultural de cada país",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "img/LOGOPELU.png",
+    "img": "img/3.png"
+},
+{
+    "_id":
+    {
+        "$oid": "59b29cc762d78b76c91d8546"
+    },
+    "name": "Women",
+    "category": "BeautyCare",
+    "subcategory": "Hairdressing",
+    "location": "C/ Alicante, 3 , Madrid, 28045, Madrid",
+    "description": "Cosmética es actualmente una disciplina de las ciencias de la salud. Entre sus objetivos está el de aplicar preparados para preservar o embellecer el cutis y el cabello. En los pueblos primitivos los cosméticos tienen un carácter mágico. ",
+    "services": [
+    {
+        "id": "Corte De Pelo Para Mujer ",
+        "time": "60",
+        "price": "40"
+    },
+    {
+        "id": "Corte De Pelo Para Hombre",
+        "time": "40",
+        "price": "42"
+    }],
+    "logo": "https://dummyimage.com/600x600/000/fff&text=10",
+    "img": "https://dummyimage.com/600x600/000/fff&text=10"
+}]
