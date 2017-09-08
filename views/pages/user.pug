@@ -3,7 +3,7 @@ extends ../layout
 block content
 	div
 		// user
-		.row.all.backgroundSearch
+		.row.all.backgroundUser
 			form.col.offset-s4.s4(action='/api/user/update', method='POST')
 				.config
 					.row
@@ -18,10 +18,6 @@ block content
 							input#email.validate(value=user.email, type='email', name='email')
 							label.active(for='email') Email
 					.row
-						.input-field.col.s12
-							input#password.validate(value=user.password, name='password', type='password')
-							label.active(for='password') Password
-					.row
 						.file-field.input-field.col.s12
 							button.btn.black.waves-effect.waves-light(name='image', type='submit')
 								| change image
@@ -34,7 +30,7 @@ block content
 						button.btn.black.waves-effect.waves-light(type='submit', name='action')
 							| update profile
 							i.material-icons.right send
-	ul#slide-out.side-nav.fixed.show-on-large
+	ul#slide-out.side-nav.show-on-large
 		li.backgroundImgUser
 			.user-view
 				a(href='')

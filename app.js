@@ -44,19 +44,20 @@ function handleLogin(req, res) {
     const { user } = req
     console.log(req.user)
     req.session.user = user;
-    console.log(req.session)
+    //console.log(req.session)
     console.log('logged');
-    res.redirect('/search')
+    res.redirect('/login')
     }
 
 
 function handleLogout(req, res) {
     req.logout()
+    req.session.destroy()
     res.redirect('/')
 }
 
 function isAuthenticated (req, res, next) {
-  if (req.isAuthenticated()) {
+  if (req.session.passport.user !== undefined) {
     console.log('is authenticated')
     return next()
   }
@@ -79,22 +80,18 @@ passport.deserializeUser(User.deserializeUser())
 /* navigation handling */
 
 app.get('/', (req, res) => {
-    res.render('pages/home')
+    res.render('pages/home', {user: req.session.user })
 })
 
 app.get('/login', (req, res) => {
-    res.render('pages/home')
-})
-
-
-app.get('/configuration', isAuthenticated,(req, res) => {
-    res.render('pages/config')
+    res.render('pages/home', {user: req.session.user })
 })
 
 app.get('/user',isAuthenticated, (req, res) => {
-    id = '59ad3ccf6a9878e5c9696dde'
+    //const { user } = req
+    //id = '59ad3ccf6a9878e5c9696dde'
     User
-        .findById(id)
+        .findById(req.session.user._id)
         .then(user => {
             res.render('pages/user', { user })
         })
@@ -126,17 +123,15 @@ app.get('/appointments', (req, res) => {
 
 app.post('/search', (req, res) => {
     const { search, category, location, time } = req.body
-    const { user } = req
-    console.log(req.session)
     Commerce
         .find({ name: new RegExp(search, 'i'), category: new RegExp(category, 'i'), location: new RegExp(location, 'i') })
         .sort({ name: 1 })
         .exec((err, commerces) => {
             if (err) return res.send('search error')
 
-            if (commerces.length === 0) return res.send('no results')
+            if (commerces.length === 0) return res.render('pages/noResults', { user: req.session.user })
 
-            res.render('pages/results', { commerces, user })
+            res.render('pages/results', { commerces, user: req.session.user })
         })
 })
 
@@ -175,12 +170,9 @@ app.post('/api/register', (req, res) => {
 })
 
 app.post('/api/user/update', (req, res) => {
-    console.log('hola')
-    const id = '59ad3ccf6a9878e5c9696dde'
-
-    var { firstname, lastname, email, password } = req.body
-    User.findByIdAndUpdate(id, { $set: { firstname: firstname, lastname: lastname, email: email, password: password } })
-        .then(() => res.redirect('/user'))
+    var { firstname, lastname, email} = req.body
+    User.findByIdAndUpdate(req.session.user._id, { $set: { firstname: firstname, lastname: lastname} })
+        .then(() => res.redirect('/user', { user: req.session.user }))
 })
 
 

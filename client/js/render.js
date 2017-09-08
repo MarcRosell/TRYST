@@ -18,9 +18,12 @@ $(document).ready(function(){
 
         $(".detail-" + index).toggle();
     });
-
+    $(".hidedFilters").hide();
     $("#openSearch").click(function() {
-        $(".filters").toggleClass("hide").fadeIn("slow");
+
+        $(".filters").toggle("fast");
+        $(".hidedFilters").toggle("fast");
+
     });
 
     $('.userNav').sideNav({

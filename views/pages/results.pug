@@ -6,8 +6,6 @@ block content
       .row.all
         .row
           .col.s12.m5
-            if user
-              p You're logged in as #{user.firstname}
             each commerce, index in commerces
               .card.horizontal
                 .card-image.waves-effect.waves-block.waves-light
@@ -50,7 +48,7 @@ block content
                 .card-content.descripCard.grey.lighten-4
                   div(id=('descritpion-' + index))
                     .row
-                      .col.l12.m12.s12
+                      .col.l12.m12.s12.inside
                         .row
                           #cardProfile.col.s12
                             .card
@@ -66,7 +64,7 @@ block content
                                   | #{commerce.description}
                   div(id=('location-' + index))
                     .row
-                      .col.l12.m12.s12
+                      .col.l12.m12.s12.inside
                         .row
                           #cardProfile.col.s12
                             .card
@@ -78,7 +76,7 @@ block content
                                   | #{commerce.location}
                   div(id=('services-' + index))
                     .row
-                      .col.l12.m12.s12
+                      .col.l12.m12.s12.inside
                         .row
                           #cardProfile.col.s12
                             .card
@@ -92,12 +90,12 @@ block content
                                   tbody
                                     each service, i in commerce.services
                                       tr
-                                        td #{service.service}
+                                        td #{service.id}
                                         td #{service.time}'
                                         td #{service.price} €
                   div(id=('tryst-' + index), ng-hide='ctrl.confirmed')
                     .row
-                      .col.l12.m12.s12
+                      .col.l12.m12.s12.inside
                         .row
                           #cardProfile.col.s12
                             .card
@@ -109,8 +107,8 @@ block content
                                     .row
                                       .input-field.col.s6
                                         select
-                                          each service, i in commerce.services
-                                            option(value = '#{service.service}' ng-model = "serviceName") #{service.service}
+                                          each service, i in commerce.services 
+                                            option(value = '#{service.id}' ng-model = "serviceName") #{service.id}
                                         label 1. Service Select
                                       .input-field.col.s6
                                         select(disabled='')
@@ -124,7 +122,7 @@ block content
                   div#allconfirms(ng-show='ctrl.confirmed')
                     div(id=('confirm-' + index))
                       .row
-                        .col.l12.m12.s12
+                        .col.l12.m12.s12.inside
                           .row
                             #cardProfile.col.s12
                               .card
@@ -150,11 +148,11 @@ block content
             a(href='')
               span.white-text.name Marc Rosell
       li
-        a(href='/user#!/appointments')
+        a(href='/appointments')
           i.material-icons.user-icons blur_linear
           span Appoinments
       li
-        a(href='/user#!/user')
+        a(href='/user')
           i.material-icons.user-icons settings
           span Configuration
       li
@@ -186,20 +184,16 @@ block content
                     span.span_h2  the desired schedule 
                     |  and 
                     span.span_h2  make an online sync appointment
-                  button.btn.black.waves-effect.waves-light(type='submit', name='action')
-                    | Sign up
-                    i.material-icons.right done_all
                 .col.s6
                   .row
-                    form.col.offset-s3.s9
+                    form.col.offset-s3.s9(action='/login', method = 'post')
                       .row
                         .input-field.col.s12
-                          input#password.validate(type='password')
-                          label(for='password') Password
-                      .row
-                        .input-field.col.s12
-                          input#email.validate(type='email')
+                          input#email.validate(type='email' name='email')
                           label(for='email', data-error='wrong', data-success='right') Email
+                      .row
+                        .input-field.col.s12
+                          input#password.validate(type='password' name='password')
+                          label(for='password') Password
                       button.btn.black.waves-effect.waves-light(type='submit', name='action')
                         | sign in
-
